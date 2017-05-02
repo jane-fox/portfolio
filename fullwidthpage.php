@@ -11,23 +11,48 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
+<style>
+	#parallax-container {
+		position: relative;
+	}
+	#parallax-container .layer {
+		position: absolute;
+	}
+</style>
 
-<div class="parallax">
-<canvas id="para-test"></canvas>
+<div class="parallax" id="parallax-container">
+	<div class="layer" data-depth="0.50"><canvas id="hex-canvas"></canvas></div>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+	<div class="layer container" data-depth=".8">
 
-		<?php the_content(  ); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-	
-	<?php endwhile; // end of the loop. ?>
+			<?php the_content(  ); ?>
+
+		
+		<?php endwhile; // end of the loop. ?>
 
 
-</div> 
+	</div> 
 
+</div>
+
+<script src="/portfolio/wp-content/themes/understrap/src/js/jquery.min.js"></script>
 <script src="/portfolio/wp-content/themes/understrap/src/js/parallax.min.js"></script>
 <script src="/portfolio/wp-content/themes/understrap/src/js/spinhex.js"></script>
 
+
+<script>
+
+$(function() {
+
+	var container = document.getElementById("parallax-container");
+
+	new Parallax(container);
+
+});
+
+</script>
 <?php /*
 <div class="wrapper" id="full-width-page-wrapper">
 
