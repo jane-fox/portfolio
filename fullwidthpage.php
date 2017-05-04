@@ -14,16 +14,34 @@ $container = get_theme_mod( 'understrap_container_type' );
 <style>
 	#parallax-container {
 		position: relative;
+		overflow-x: hidden;
+		overflow-y: visible;
+		height: 400px;
 	}
 	#parallax-container .layer {
 		position: absolute;
+
+	}
+	.layer canvas {
+		position: absolute;
+		left: -200px;
+		top: -200px;
+	}
+
+	.bg-inverse {
+		background: transparent !important;
+	}
+	.bg-inverse a {
+		color: #000 !important;
 	}
 </style>
 
 <div class="parallax" id="parallax-container">
-	<div class="layer" data-depth="0.50"><canvas id="hex-canvas"></canvas></div>
+	<div class="layer" data-depth="0.90">
+		<canvas id="hex-canvas"></canvas>
+	</div>
 
-	<div class="layer container" data-depth=".8">
+	<div class="layer container" data-depth=".2">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -37,9 +55,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div>
 
+
 <script src="/portfolio/wp-content/themes/understrap/src/js/jquery.min.js"></script>
 <script src="/portfolio/wp-content/themes/understrap/src/js/parallax.min.js"></script>
 <script src="/portfolio/wp-content/themes/understrap/src/js/spinhex.js"></script>
+
 
 
 <script>
@@ -53,6 +73,8 @@ $(function() {
 });
 
 </script>
+
+
 <?php /*
 <div class="wrapper" id="full-width-page-wrapper">
 
