@@ -8,38 +8,20 @@
  */
 
 get_header();
-$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<style>
-	#parallax-container {
-		position: relative;
-		overflow-x: hidden;
-		overflow-y: visible;
-		height: 400px;
-	}
-	#parallax-container .layer {
-		position: absolute;
 
-	}
-	.layer canvas {
-		position: absolute;
-		left: -200px;
-		top: -200px;
-	}
-
-	.bg-inverse {
-		background: transparent !important;
-	}
-	.bg-inverse a {
-		color: #000 !important;
-	}
-</style>
-
-<div class="parallax" id="parallax-container">
-	<div class="layer" data-depth="0.90">
-		<canvas id="hex-canvas"></canvas>
+<div class="parallax color-bg" id="parallax-container">
+	<div class="layer" data-depth="0.10"> 
+		<canvas id="hex-canvas1"></canvas>
 	</div>
+	<div class="layer" data-depth="0.50"> 
+		<canvas id="hex-canvas2"></canvas>
+	</div>
+	<div class="layer" data-depth="0.90"> 
+		<canvas id="hex-canvas3"></canvas>
+	</div>
+
 
 	<div class="layer container" data-depth=".2">
 
@@ -56,9 +38,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div>
 
 
+
+<div class="container">
+
+	<h2> Extra content down here </h2>
+
+	<h3> wordpress</h3>
+	<h3> javascript</h3>
+	<h3> everything</h3>
+
+</div>
+
+
 <script src="/portfolio/wp-content/themes/understrap/src/js/jquery.min.js"></script>
 <script src="/portfolio/wp-content/themes/understrap/src/js/parallax.min.js"></script>
-<script src="/portfolio/wp-content/themes/understrap/src/js/spinhex.js"></script>
+<script src="/portfolio/wp-content/themes/bootstrap-basic/js/spinhex.js"></script>
 
 
 
