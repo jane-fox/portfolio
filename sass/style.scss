@@ -1,0 +1,267 @@
+/*!
+Theme Name: wp-website-portfolio
+Theme URI: http://underscores.me/
+Author: Jane
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wp-website-portfolio
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+wp-website-portfolio is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+
+
+
+
+$color-main: #6248ec;
+$color-white: #f9f7fb;
+$color-grey: #dad9e5;
+$color-grey: #ccc3d3;
+
+$color-dark: #5a555f;
+
+
+$tightness: 20px;
+
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+
+
+
+body {
+
+	font-family: "Cantarell";
+	background-color: $color-white;
+	color: $color-dark;
+}
+
+
+img.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+
+#site-nav {
+	z-index: 999;
+	border-radius: 0;
+	margin-bottom: 0;
+
+	a {
+		color: $color-white;
+	}
+	a:hover {
+		background-color: rgba(255,255,255, .1);
+	}
+	.active a {
+		background-color: rgba(0,0,0, .1);
+	}
+}
+
+
+.color-bg {
+	background-color: $color-main;
+	color: $color-white;
+}
+
+
+a, a:visited {
+	color: $color-main;
+}
+
+h1 {
+	margin: 0;
+	padding: 1em 0;
+	//color: #FFF;
+}
+
+
+
+
+
+#site-footer {
+	background-color: $color-dark;
+	color: #FFF;
+	padding: 20px 0;
+}
+
+
+
+
+#parallax-container {
+	position: relative;
+	top: -100px;
+	overflow: hidden;
+	height: 500px;
+
+	.layer canvas {
+		position: absolute;
+		left: -200px;
+		top: -100px;
+	}
+}
+
+
+.sidebar {
+	color: $color-dark;
+
+	margin: $tightness 0;
+	padding: $tightness;
+
+	ul {
+		padding-left: 0;
+	}
+	li {
+		list-style-type: none;
+	}
+}
+
+.margin-top {
+	margin-top: $tightness;
+}
+
+//To make anim appear underneath
+.home #site-nav {
+	background-color: transparent;
+}
+
+
+
+.post-list {
+
+	header {
+		img {
+			float: left;
+			max-height: 150px;
+			max-width: 150px;
+			height: auto;
+			width: auto;
+		}
+		h3, h2 {
+			display: inline-block;
+		}
+	}
+
+}
+
+
+
+.project-gallery {
+	width: 100%;
+	background-color: $color-grey;
+	padding: 20px 0;
+
+	a {
+		display: inline-block;
+	}
+}
+
+
+.tag {
+	border: 1px solid $color-main;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+
+
+
+
