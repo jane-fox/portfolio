@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php
+ * Template part for displaying a project
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -8,6 +8,7 @@
  */
 
 ?>
+
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
