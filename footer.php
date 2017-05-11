@@ -13,16 +13,22 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wp-website-portfolio' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'wp-website-portfolio' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'wp-website-portfolio' ), 'wp-website-portfolio', '<a href="https://automattic.com/" rel="designer">Jane</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	<footer id="site-footer" role="contentinfo">
+		<div class="container">
+			<div class="col-sm-6">
+				<!-- <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wp-website-portfolio' ) ); ?>"><?php printf( esc_html__( 'Powered by %s', 'wp-website-portfolio' ), 'WordPress' ); ?></a> -->
+				Powered by Wordpres | Custom theme based on _s
+			</div>
+
+			<div class="col-sm-6 footer-right text-right">
+				© 2017 Jane Fox
+			</div>
+			
+		</div><!-- .container -->
+	</footer><!-- #site-footer -->
 
 <?php wp_footer(); ?>
 
 </body>
 </html>
+

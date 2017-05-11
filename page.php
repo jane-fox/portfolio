@@ -14,6 +14,17 @@
 
 get_header(); ?>
 
+<header class="color-bg">
+	<div class="container">
+		<h1><?php the_title(); ?></h1>
+	</div>
+</header>
+
+<div class="container">
+<div class="row">
+
+	<div class="col-md-8">
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -32,7 +43,12 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+</div>
 
-<?php
-get_sidebar();
+<div class="col-md-4"><?php get_sidebar(); ?></div>
+
+</div><!-- .row -->
+</div><!-- .container -->
+
+<?php 
 get_footer();

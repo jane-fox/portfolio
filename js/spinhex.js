@@ -2,7 +2,8 @@
 var size = 200;
 var spacing = 0;
 var thickness = 30;
-var color = "#403049";
+var color = "#5a555f";
+//var color = "#e8624c";
 
 
 document.addEventListener("DOMContentLoaded", function(event) { 
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 	//Make a new gif and set its target
-	var new_gif = new js_gif({ target: "para-test"});
+	var new_gif = new js_gif({ target: "hex-canvas"});
 
 
 });
@@ -46,8 +47,9 @@ function js_gif(options) {
 	var canvas = document.getElementById(options.target);
 	var ctx = canvas.getContext("2d");
 
-	var width = window.innerWidth;
-	var height = window.innerHeight;
+	var width = window.innerWidth + 400;
+	var height = 800;
+	//var height = window.innerHeight;
 
 	canvas.width = width;
 	canvas.height = height;	
@@ -121,6 +123,10 @@ function js_gif(options) {
 		hex_ctx.beginPath();
 
 
+		// The hexagons are made of 3 parts that connect together
+		// Rotating canvas in place is difficult, so just redraw the parts
+
+
 
 		///1st seciton
 		hex_ctx.moveTo(points[1].x, points[1].y);
@@ -180,9 +186,9 @@ function js_gif(options) {
 
 
 		//Loop through to draw tons of hexagons to fill the screen!
-		for(a=-10; a < 10; a++) {
+		for(a=-5; a < 3; a++) {
 
-			for(b=-10; b< 10; b++) {
+			for(b=-5; b< 3; b++) {
 
 				var pos = get_pos(a,b);
 				//draw_hex(pos.x, pos.y);

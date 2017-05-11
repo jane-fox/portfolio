@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full Width Page
+ * Template Name: Custom Animation
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
