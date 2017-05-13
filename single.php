@@ -15,6 +15,19 @@ get_header(); ?>
 	</div>
 </header>
 
+
+<?php
+$above_page = get_field('above_page');
+
+if( $above_page ): ?>
+    <div class="project-gallery">
+	    <div class="container">
+	        <?php echo $above_page; ?>
+	    </div>
+    </div>
+<?php endif; ?>
+
+
 <div class="container">
 <div class="row">
 

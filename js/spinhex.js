@@ -6,6 +6,9 @@ var color = "#5a555f";
 //var color = "#e8624c";
 
 
+
+
+
 document.addEventListener("DOMContentLoaded", function(event) { 
 
 	console.log("Loaded!");
@@ -23,10 +26,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	//Begin drawing animation
 	requestAnimationFrame(draw);
 */
+	var target = document.getElementById("hex-canvas");
+
+	if (target) {
+		//Make a new gif and set its target
+		var new_gif = new js_gif({ target: "hex-canvas"});
+
+	}
 
 
-	//Make a new gif and set its target
-	var new_gif = new js_gif({ target: "hex-canvas"});
 
 
 });

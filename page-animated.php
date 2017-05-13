@@ -2,9 +2,9 @@
 /**
  * Template Name: Custom Animation
  *
- * Template for displaying a page without sidebar even if a sidebar widget is published.
+ * Renders page with big javascript animation
  *
- * @package understrap
+ * @package wp-website-portfolio
  */
 
 get_header();
@@ -50,15 +50,10 @@ get_header();
 </div>
 
 
-<script src="/portfolio/wp-content/themes/understrap/src/js/jquery.min.js"></script>
-<script src="/portfolio/wp-content/themes/understrap/src/js/parallax.min.js"></script>
-<script src="/portfolio/wp-content/themes/bootstrap-basic/js/spinhex.js"></script>
-
-
 
 <script>
 
-$(function() {
+jQuery(function() {
 
 	var container = document.getElementById("parallax-container");
 

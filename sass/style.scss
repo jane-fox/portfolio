@@ -1,11 +1,14 @@
 
 
 $color-main: #6248ec;
-$color-white: #f9f7fb;
+$color-white: #f7f5f9;
 $color-grey: #dad9e5;
-$color-grey: #ccc3d3;
+$color-grey: #b5b0bb;
 
 $color-dark: #5a555f;
+
+//Breakpoint for small and up
+$break-sm-up: "min-width: 768px";
 
 
 $tightness: 20px;
@@ -39,6 +42,10 @@ $tightness: 20px;
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
+
+
+// Lightbox
+@import "lightbox";
 
 
 
@@ -100,6 +107,9 @@ $tightness: 20px;
 --------------------------------------------------------------*/
 @import "media/media";
 
+// Top navbar / header
+@import "nav";
+
 
 
 
@@ -118,48 +128,6 @@ img.aligncenter {
 
 
 
-
-#site-nav {
-	z-index: 999;
-	border-radius: 0;
-	margin-bottom: 0;
-
-	a {
-		color: $color-white;
-		text-decoration: none;
-		padding: $tightness;
-		display: inline-block;
-
-	}
-	a:hover {
-		background-color: rgba(255,255,255, .1);
-	}
-	.active a {
-		background-color: rgba(0,0,0, .1);
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-	li {
-		list-style-type: none;
-		display: inline-block;
-	}
-}
-
-.site-title {
-	display: inline-block;
-	margin: 0;
-
-	a {
-		font-size: 1.2em;
-	}
-}
-.site-description {
-	display: inline-block;
-	margin: 0;
-}
 
 .color-bg {
 	background-color: $color-main;
@@ -219,6 +187,10 @@ h1 {
 	}
 }
 
+.widget-title {
+	font-size: 20px;
+}
+
 .margin-top {
 	margin-top: $tightness;
 }
@@ -268,20 +240,10 @@ h1 {
 }
 
 
+.project-gallery {
 
-
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
+	a {
+		margin-right: $tightness;
 	}
-	.main-navigation ul {
-		display: block;
-	}
+
 }

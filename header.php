@@ -24,26 +24,42 @@
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-website-portfolio' ); ?></a>
 
 <header id="site-nav" class="site-header navbar color-bg" role="banner">
-	<div class="container">
-		<?php
-		if ( is_front_page() && is_home() ) : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<?php else : ?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-		<?php
-		endif;
+    <div class="container"><div class="row">
 
-		$description = get_bloginfo( 'description', 'display' );
-		if ( $description || is_customize_preview() ) : ?>
-			<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-		<?php
-		endif; ?>
+        <?php
+        if ( is_front_page() && is_home() ) : ?>
+            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        <?php else : ?>
+            <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+        <?php
+        endif;
 
-		<nav id="site-navigation" class=" nav navbar-nav navbar-right" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wp-website-portfolio' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'menu_class' => '' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</div>
+        $description = get_bloginfo( 'description', 'display' );
+        if ( $description || is_customize_preview() ) : ?>
+            <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+        <?php
+        endif; ?>
+
+
+        <nav id="collapse-menu" class=" nav navbar-nav navbar-right collapse navbar-collapse" role="navigation">
+            <?php wp_nav_menu( array( 
+                'theme_location' => 'menu-1',
+                'menu_id' => 'primary-menu',
+                'menu_class' => ''
+            ) ); ?>
+        </nav><!-- #site-navigation -->
+
+
+		<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#collapse-menu">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="glyphicon glyphicon-menu-hamburger"></span>
+		</button>
+
+
+    </div></div><!-- .row .container -->
 </header><!-- #masthead -->
 
 <div id="content" class="site-content">
+
+            
+<?php /*  <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wp-website-portfolio' ); ?></button> */ ?>

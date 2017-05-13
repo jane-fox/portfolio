@@ -121,3 +121,25 @@ function wp_website_portfolio_category_transient_flusher() {
 }
 add_action( 'edit_category', 'wp_website_portfolio_category_transient_flusher' );
 add_action( 'save_post',     'wp_website_portfolio_category_transient_flusher' );
+
+
+
+// Custom gallery format
+//add_filter('post_gallery','customFormatGallery',10,2);
+
+function customFormatGallery($string,$attr) {
+
+    $output = "<div>";
+    $posts = get_posts(array('include' => $attr['ids'],'post_type' => 'attachment'));
+    foreach($posts as $imagePost){
+
+        $output .= "<a href='".wp_get_attachment_image_src($imagePost->ID, 'extralarge')[0]."'  data-lightbox='lightbox' data-title='title'>";
+        $output .= "<img src='".wp_get_attachment_image_src($imagePost->ID, 'medium')[0]."' ></a>";
+    
+    }
+
+    $output .= "</div>";
+
+    return $output;
+}
+

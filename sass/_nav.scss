@@ -1,0 +1,68 @@
+
+
+#site-nav {
+	z-index: 999;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+
+
+	a {
+		color: $color-white;
+		text-decoration: none;
+		padding: $tightness;
+		display: block;
+
+	}
+	a:hover {
+		background-color: rgba(255,255,255, .1);
+	}
+	.active a {
+		background-color: rgba(0,0,0, .1);
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+		display: block;
+	}
+	.navbar-toggle {
+		font-size: 24px;
+		color: $color-white;
+
+	}
+
+
+}
+
+//Make menu inline for non-mobile sizes
+@media ($break-sm-up) {
+	#site-nav {
+		border: none;
+		margin: 0px;
+
+		li, a {
+			display: inline-block;
+		}
+	}
+}
+
+
+
+.site-title {
+	display: inline-block;
+	margin: 0;
+
+	a {
+		font-size: 1.2em;
+	}
+}
+
+.site-description {
+	display: inline-block;
+	margin: 0;
+	color: $color-grey;
+}
