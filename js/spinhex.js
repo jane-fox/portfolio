@@ -7,8 +7,6 @@ var color = "#5a555f";
 
 
 
-
-
 document.addEventListener("DOMContentLoaded", function(event) { 
 
 	console.log("Loaded!");

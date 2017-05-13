@@ -17,14 +17,30 @@ get_header(); ?>
 
 
 <?php
+
+// Get custom gallery for project heading display
 $above_page = get_field('above_page');
 
+
 if( $above_page ): ?>
-    <div class="project-gallery">
-	    <div class="container">
-	        <?php echo $above_page; ?>
-	    </div>
-    </div>
+
+	<div class="project-gallery">
+    	<div class="container">
+
+	    	<?php foreach ( $above_page as $image ) { ?>
+	    		<div class="col-sm-3 project-thumb">
+		    		<a class=""
+	    			   href="<?php echo $image["url"]; ?>"
+	    			   data-lightbox="header"
+	    			   data-title="<?php echo $image["title"]; ?>"
+		    		>
+		    			<img src="<?php echo $image["sizes"]["thumbnail"]; ?>">
+	    			</a>
+    			</div>
+	    	<?php } //foreach ?>
+
+	    </div><!-- .container -->
+    </div><!-- .gallery -->
 <?php endif; ?>
 
 
