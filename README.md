@@ -14,4 +14,4 @@ Thanks
 ----
 
 https://github.com/Automattic/_s
-https://github.com/ashleydw/lightbox
+https://github.com/lokesh/lightbox2/

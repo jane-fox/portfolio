@@ -34,7 +34,7 @@ if( $above_page ): ?>
 	    			   data-lightbox="header"
 	    			   data-title="<?php echo $image["title"]; ?>"
 		    		>
-		    			<img src="<?php echo $image["sizes"]["thumbnail"]; ?>">
+		    			<img src="<?php echo $image["sizes"]["thumbnail"]; ?>" alt="alt test">
 	    			</a>
     			</div>
 	    	<?php } //foreach ?>

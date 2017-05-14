@@ -267,3 +267,7 @@ h1 {
 	margin: $tightness/2 0;
 }
 
+// Remove next / prev links in post
+.post-navigation {
+	display: none;
+}
