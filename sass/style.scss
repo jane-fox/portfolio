@@ -141,10 +141,9 @@ a, a:visited {
 	color: $color-main;
 }
 
-h1 {
-	margin: 0;
-	padding: 1em 0;
-	//color: #FFF;
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	margin: $tightness*2 0 $tightness 0;
 }
 
 
@@ -165,15 +164,17 @@ h1 {
 
 
 #parallax-container {
-	position: relative;
-	top: -100px;
+	margin-top: -100px;
 	overflow: hidden;
 	height: 500px;
 
-	.layer canvas {
-		position: absolute;
-		left: -200px;
-		top: -100px;
+	.layer  {
+
+		canvas {
+			position: absolute;
+			left: -200px;
+			top: -100px;
+		}
 	}
 }
 
@@ -285,7 +286,8 @@ h1 {
 .entry-content {
 	margin: 0;
 }
+
 #primary {
 	margin: $tightness*2 0;
-	
+
 }

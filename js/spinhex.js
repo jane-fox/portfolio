@@ -1,38 +1,28 @@
 
+
 var size = 200;
 var spacing = 0;
 var thickness = 30;
-var color = "#5a555f";
+var color = "#639";
+//var color = "#5a555f";
 //var color = "#e8624c";
 
 
 
+
+// Start script on page load
 document.addEventListener("DOMContentLoaded", function(event) { 
 
 	console.log("Loaded!");
-/*
- 	canvas = document.getElementById("canvas");
- 	ctx = canvas.getContext("2d");
 
-	thinger.angles = [new angle(size, 0), new angle(size, 2), new angle(size, 4)];
-	thinger.hex = new hex();
-	update_canvas();
 
-	//draw();
-	//hex = new angle();
+	var canvas = document.getElementById("hex-canvas");
 
-	//Begin drawing animation
-	requestAnimationFrame(draw);
-*/
-	var target = document.getElementById("hex-canvas");
-
-	if (target) {
+	if (canvas) {
 		//Make a new gif and set its target
 		var new_gif = new js_gif({ target: "hex-canvas"});
 
 	}
-
-
 
 
 });
@@ -50,22 +40,50 @@ function js_gif(options) {
 
 	//Setup variables
 	//var encoder = new GIFEncoder();
-	var canvas = document.getElementById(options.target);
+	var canvas = document.getElementById("hex-canvas");
+	var canvas2 = document.getElementById("hex-canvas2");
+	var canvas3 = document.getElementById("hex-canvas3");
 	var ctx = canvas.getContext("2d");
+	var ctx2 = canvas2.getContext("2d");
+	var ctx3 = canvas3.getContext("2d");
 
 	var width = window.innerWidth + 400;
 	var height = 800;
 	//var height = window.innerHeight;
 
 	canvas.width = width;
+	canvas2.width = width;
+	canvas3.width = width;
+
 	canvas.height = height;	
+	canvas2.height = height;	
+	canvas3.height = height;	
 
 
 	var bg_color = "#409";
 
 	var hex_canvas = document.createElement("canvas");
+	var hex_canvas2 = document.createElement("canvas");
+	var hex_canvas3 = document.createElement("canvas");
 	var hex_ctx = hex_canvas.getContext("2d");
+	var hex_ctx2 = hex_canvas2.getContext("2d");
+	var hex_ctx3 = hex_canvas3.getContext("2d");
 		hex_canvas.width = hex_canvas.height = size * 4;
+		hex_canvas2.width = hex_canvas2.height = size * 4;
+		hex_canvas3.width = hex_canvas3.height = size * 4;
+
+	// Default line style
+	hex_ctx.strokeStyle = color;
+	hex_ctx2.strokeStyle = color;
+	hex_ctx3.strokeStyle = color;
+
+	hex_ctx.fillStyle = hex_ctx2.fillStyle = hex_ctx3.fillStyle = color;
+
+	hex_ctx.lineCap = hex_ctx2.lineCap = hex_ctx3.lineCap  = "round";
+
+	hex_ctx.lineWidth = hex_ctx2.lineWidth = hex_ctx3.lineWidth = thickness;
+
+
 
 	var angles = [];
 	var points = [];
@@ -73,23 +91,19 @@ function js_gif(options) {
 	angles[1] = new angle(size, 2);
 	angles[2] = new angle(size, 4);
 
-/*
-	encoder.setRepeat(0); //auto-loop
-	encoder.setDelay(20); //~60FPS
-	encoder.setSize(canvas.width, canvas.height);
-*/
 
-	frame = 0;
-	total_frames = 73;
-	compile_gif = false;
-	gif_done = false;
+
+	var frame = 0;
+	var total_frames = 73;
+	var compile_gif = false;
+	var gif_done = false;
 
 
 	var init = function() {
 
 		//encoder.start();
 
-				//Set up drawing path
+		//Set up drawing path
 		for (var i = 0; i < 6; i++ ) {
 
 			//var angle = 2 * Math.PI / 6 * (i +.5);
@@ -99,11 +113,12 @@ function js_gif(options) {
 			var line_x = hex_canvas.width/2 + size * Math.cos(angle);
 			var line_y = hex_canvas.width/2 + size * Math.sin(angle);
 
-
+			// Corner coordinates for hexagons
 			points.push({x: line_x, y: line_y});
 
 		}//path
 
+		// Start the animation
 		animation_step();
 
 		//console.log(angles);
@@ -119,14 +134,20 @@ function js_gif(options) {
 
 		
 		ctx.clearRect(0,0,canvas.width, canvas.height);
+		ctx2.clearRect(0,0,canvas.width, canvas.height);
+		ctx3.clearRect(0,0,canvas.width, canvas.height);
 
 		hex_ctx.clearRect(0,0,hex_canvas.width, hex_canvas.height);
+		hex_ctx2.clearRect(0,0,hex_canvas.width, hex_canvas.height);
+		hex_ctx3.clearRect(0,0,hex_canvas.width, hex_canvas.height);
 
 		//hex_ctx.rect(0,0,hex_canvas.width, hex_canvas.height);
 
 		//hex_ctx.stroke();
 
 		hex_ctx.beginPath();
+		hex_ctx2.beginPath();
+		hex_ctx3.beginPath();
 
 
 		// The hexagons are made of 3 parts that connect together
@@ -135,7 +156,7 @@ function js_gif(options) {
 
 
 		///1st seciton
-		hex_ctx.moveTo(points[1].x, points[1].y);
+		//hex_ctx.moveTo(points[1].x, points[1].y);
 
 		var new_x_1 = points[1].x + size * Math.cos((frame-180)*Math.PI/180);
 		var new_y_1 = points[1].y + size * Math.sin((frame-180)*Math.PI/180);
@@ -144,44 +165,41 @@ function js_gif(options) {
 		hex_ctx.lineTo(points[1].x + size * Math.cos((frame-60)*Math.PI/180), points[1].y + size * Math.sin((frame-60)*Math.PI/180));
 
 		///2nd seciton
-		hex_ctx.moveTo(points[3].x, points[3].y);
-		hex_ctx.lineTo(points[3].x + size * Math.cos((frame-60)*Math.PI/180), points[3].y + size * Math.sin((frame-60)*Math.PI/180));
+		//hex_ctx2.moveTo(points[3].x, points[3].y);
+		//hex_ctx2.lineTo(points[3].x + size * Math.cos((frame-60)*Math.PI/180), points[3].y + size * Math.sin((frame-60)*Math.PI/180));
 
 		var new_x_2 = points[1].x + size * Math.cos((frame-180)*Math.PI/180);
 		var new_y_2 = points[1].y + size * Math.sin((frame-180)*Math.PI/180);
 
-		hex_ctx.moveTo(points[3].x, points[3].y);
-		hex_ctx.lineTo(points[3].x + size * Math.cos((frame+60)*Math.PI/180), points[3].y + size * Math.sin((frame+60)*Math.PI/180));
+		hex_ctx2.moveTo(points[3].x, points[3].y);
+		hex_ctx2.lineTo(points[3].x + size * Math.cos((frame+60)*Math.PI/180), points[3].y + size * Math.sin((frame+60)*Math.PI/180));
 
 		///3rd seciton
-		hex_ctx.moveTo(points[5].x, points[5].y);
-		hex_ctx.lineTo(points[5].x + size * Math.cos((frame+60)*Math.PI/180), points[5].y + size * Math.sin((frame+60)*Math.PI/180));
+		//hex_ctx3.moveTo(points[5].x, points[5].y);
+		//hex_ctx3.lineTo(points[5].x + size * Math.cos((frame+60)*Math.PI/180), points[5].y + size * Math.sin((frame+60)*Math.PI/180));
 
-		hex_ctx.moveTo(points[5].x, points[5].y);
-		hex_ctx.lineTo(points[5].x + size * Math.cos((frame-180)*Math.PI/180), points[5].y + size * Math.sin((frame-180)*Math.PI/180));
-
-
-		//section
+		hex_ctx3.moveTo(points[5].x, points[5].y);
+		hex_ctx3.lineTo(points[5].x + size * Math.cos((frame-180)*Math.PI/180), points[5].y + size * Math.sin((frame-180)*Math.PI/180));
 
 
-		hex_ctx.strokeStyle = color;
-		hex_ctx.fillStyle = color;
-		hex_ctx.lineWidth = thickness;
-		hex_ctx.lineCap = "round";
 
 
 		//Draw polygon
 		//context.fill();
 		hex_ctx.stroke();
-		hex_ctx.closePath();
-
-
-		hex_ctx.beginPath();
-
-
-		hex_ctx.fill();
+		hex_ctx2.stroke();
+		hex_ctx3.stroke();
 
 		hex_ctx.closePath();
+		hex_ctx2.closePath();
+		hex_ctx3.closePath();
+
+
+		//hex_ctx.beginPath();
+
+		//hex_ctx.fill();
+
+		//hex_ctx.closePath();
 
 
 
@@ -199,6 +217,8 @@ function js_gif(options) {
 				var pos = get_pos(a,b);
 				//draw_hex(pos.x, pos.y);
 				ctx.drawImage(hex_canvas, pos.x, pos.y);
+				ctx2.drawImage(hex_canvas2, pos.x, pos.y);
+				ctx3.drawImage(hex_canvas3, pos.x, pos.y);
 
 			}
 
@@ -208,13 +228,13 @@ function js_gif(options) {
 		//Start next frame
 		requestAnimationFrame(animation_step);
 
-	}
+	} // animation_step
 
 
-
+	// This will call init when object is created.
 	init();
 
-}
+} // js_gif
 
 
 
@@ -234,8 +254,8 @@ function get_pos(x, y) {
 	var width = window.innerWidth;
 	var height = window.innerHeight;
 
-	var map_x = Math.round(width/2 +  (size + spacing) * 3/2 * x);
-	var map_y = Math.round(height/2 + (size + spacing) * Math.sqrt(3) * (y + x/2));
+	var map_x = Math.round(width / 2 +  (size + spacing) * 3/2 * x);
+	var map_y = Math.round(height / 2 + (size + spacing) * Math.sqrt(3) * (y + x/2));
 
 	return {x:map_x, y: map_y};
 }
@@ -308,47 +328,7 @@ var angle = function(size, offset) {
 	context.stroke();
 	context.closePath();
 
-	this.canvas = canvas;
-	this.rotate_point = {x: mid_x, y: mid_y};
 
 }
 
 
-/*
-
-	hex_ctx.save();
-
-	hex_ctx.clearRect(0,0,hex_canvas.width, hex_canvas.height);
-
-	hex_ctx.rotate(frame*Math.PI/180);
-
-
-	//hex_ctx.drawImage(angle_1, offset, offset);
-	//hex_ctx.drawImage(angle_2, hex_canvas.width/4, hex_canvas.width/4);
-	//hex_ctx.drawImage(angle_3, hex_canvas.width/4, hex_canvas.width/4);
-
-	hex_ctx.stroke();
-	hex_ctx.restore();
-
-
-	hex_ctx.save();
-
-
-	hex_ctx.rect(0,0, angles[1].rotate_point.x, angles[1].rotate_point.y );
-	hex_ctx.stroke();
-
-	//hex_ctx.translate( offset + angles[1].rotate_point.x,  offset + angles[1].rotate_point.y );
-	hex_ctx.translate( angles[1].rotate_point.x,  angles[1].rotate_point.y );
-	hex_ctx.rotate( frame *Math.PI/180  );
-	hex_ctx.translate( -angles[1].rotate_point.x, -angles[1].rotate_point.y );
-
-	hex_ctx.drawImage( angles[1].canvas, offset, offset );
-
-
-	hex_ctx.restore();
-
-
-	hex_ctx.drawImage( angles[2].canvas, offset, offset );
-	hex_ctx.drawImage( angles[0].canvas, offset, offset );
-
-*/

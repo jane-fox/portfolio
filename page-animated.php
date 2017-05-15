@@ -12,18 +12,18 @@ get_header();
 
 
 <div class="parallax color-bg" id="parallax-container">
-	<div class="layer" data-depth="0.10"> 
+	<div class="layer" data-depth="0.30"> 
 		<canvas id="hex-canvas"></canvas>
 	</div>
 	<div class="layer" data-depth="0.50"> 
 		<canvas id="hex-canvas2"></canvas>
 	</div>
-	<div class="layer" data-depth="0.90"> 
+	<div class="layer" data-depth="0.70"> 
 		<canvas id="hex-canvas3"></canvas>
 	</div>
 
 
-	<div class="layer container" data-depth=".2">
+	<div class="layer container" data-depth=".1">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -40,7 +40,48 @@ get_header();
 
 
 <div class="container">
-<div class="row">
+<div class="row text-center">
+
+	<h2> Why work with me </h2>
+	<hr>
+
+	<div class="col-md-4">
+		<div style="text-align: center;font-size: 64px;">
+			<span class="glyphicon glyphicon-object-align-top"></span>
+		</div>
+		<h3>Fast</h3>
+		<p>Basic Wordpress setup in less than 7 days.</p>
+
+	</div>
+
+	<div class="col-md-4">
+		<div style="text-align: center;font-size: 64px;">
+			<span class="glyphicon glyphicon-cog"></span>
+		</div>
+		<h3>Flexible</h3>
+		<p>My solutions aren't limited to one platform. I can advise you on the technology that's best for your project.</p>
+
+	</div>
+
+	<div class="col-md-4">
+		<div style="text-align: center;font-size: 64px;">
+			<span class="glyphicon glyphicon-wrench"></span>
+		</div>
+		<h3>Experienced</h3>
+		<p>Great teams have imparted their wisdom to me. Now I can put it to work for you.</p>
+
+	</div>
+
+
+	<br class="clearfix">
+
+
+</div>
+<div class="row"></div>
+	<br>
+	<br>
+	<hr>
+	<br>
 
 	<h2> What I can do for you. </h2>
 	<hr>
@@ -71,6 +112,8 @@ get_header();
 		<p>Having trouble with a website? Original developer not able to help? I can quickly jump in to any project and start making things work.</p>
 
 	</div>
+
+
 
 </div>
 </div>
