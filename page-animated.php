@@ -40,48 +40,8 @@ get_header();
 
 
 <div class="container">
-<div class="row text-center">
+<div class="row text-center margin-bottom">
 
-	<h2> Why work with me </h2>
-	<hr>
-
-	<div class="col-md-4">
-		<div style="text-align: center;font-size: 64px;">
-			<span class="glyphicon glyphicon-object-align-top"></span>
-		</div>
-		<h3>Fast</h3>
-		<p>Basic Wordpress setup in less than 7 days.</p>
-
-	</div>
-
-	<div class="col-md-4">
-		<div style="text-align: center;font-size: 64px;">
-			<span class="glyphicon glyphicon-cog"></span>
-		</div>
-		<h3>Flexible</h3>
-		<p>My solutions aren't limited to one platform. I can advise you on the technology that's best for your project.</p>
-
-	</div>
-
-	<div class="col-md-4">
-		<div style="text-align: center;font-size: 64px;">
-			<span class="glyphicon glyphicon-wrench"></span>
-		</div>
-		<h3>Experienced</h3>
-		<p>Great teams have imparted their wisdom to me. Now I can put it to work for you.</p>
-
-	</div>
-
-
-	<br class="clearfix">
-
-
-</div>
-<div class="row"></div>
-	<br>
-	<br>
-	<hr>
-	<br>
 
 	<h2> What I can do for you. </h2>
 	<hr>
@@ -90,8 +50,9 @@ get_header();
 		<div style="text-align: center;font-size: 64px;">
 			<span class="glyphicon glyphicon-object-align-top"></span>
 		</div>
-		<h3>Best solution for your needs</h3>
-		<p>With a variety of different tools, we can find the best tech for your exact requirements.</p>
+		<h3>Bring yor brand to life</h3>
+		<p>No need to settle with pre-made themes when you can make your brand stand out the way it was meant to. I can bring your design online and pixel perfect.</p>
+		<p>(alt) Don't settle for pre-made themes when making your brand stand out is critical to your success.</p>
 
 	</div>
 
@@ -101,7 +62,7 @@ get_header();
 		</div>
 		<h3>Wordpress Setup & Customization</h3>
 		<p>The best fit for most needs! Bring your idea online fast, with any theme you need.</p>
-
+		
 	</div>
 
 	<div class="col-md-4">
@@ -118,7 +79,47 @@ get_header();
 </div>
 </div>
 
-<hr>
+
+
+<div class="alt-bg">
+<div class="container">
+<div class="row text-center margin-bottom">
+
+
+
+	<h2> Why work with me </h2>
+	<hr>
+
+	<div class="col-md-4">
+		<div style="text-align: center;font-size: 64px;">
+			<span class="glyphicon glyphicon-fast-forward"></span>
+		</div>
+		<h3>Fast</h3>
+		<p>Basic Wordpress setup in less than 7 days.</p>
+
+	</div>
+
+	<div class="col-md-4">
+		<div style="text-align: center;font-size: 64px;">
+			<span class="glyphicon glyphicon-certificate"></span>
+		</div>
+		<h3>Flexible</h3>
+		<p>My solutions aren't limited to one platform. I can advise you on the technology that's best for your project.</p>
+
+	</div>
+
+	<div class="col-md-4">
+		<div style="text-align: center;font-size: 64px;">
+			<span class="glyphicon glyphicon-globe"></span>
+		</div>
+		<h3>Experienced</h3>
+		<p>Great teams have imparted their wisdom to me. Now I can put it to work for you.</p>
+
+	</div>
+
+</div>
+</div>
+</div>
 
 
 <script>
