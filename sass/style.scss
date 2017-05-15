@@ -2,9 +2,10 @@
 //#f0604c
 //$color-main: #6258ec;
 $color-main: #6050f0;
+$color-second: #d5cff5;
+
 $color-white: #f7f5f9;
-$color-grey: #dad9e5;
-$color-grey: #d5cff5;
+$color-grey: #c5c0cf;
 
 $color-dark: #5a555f;
 
@@ -147,13 +148,17 @@ h1 {
 }
 
 
-
+.page-title {
+	font-size: 32px;
+	margin: 0;
+	padding: $tightness*2 0;
+}
 
 
 #site-footer {
 	background-color: $color-dark;
 	color: #FFF;
-	padding: 20px 0;
+	padding: $tightness*2 0;
 }
 
 
@@ -190,6 +195,11 @@ h1 {
 
 .widget-title {
 	font-size: 20px;
+	color: $color-dark;
+}
+
+.widget a {
+	color: $color-grey;
 }
 
 .margin-top {
@@ -224,8 +234,8 @@ h1 {
 
 .project-gallery {
 	width: 100%;
-	background-color: $color-grey;
-	padding: 20px 0;
+	background-color: $color-second;
+	padding: $tightness*2 0;
 
 	a {
 		display: inline-block;
@@ -270,4 +280,12 @@ h1 {
 // Remove next / prev links in post
 .post-navigation {
 	display: none;
+}
+
+.entry-content {
+	margin: 0;
+}
+#primary {
+	margin: $tightness*2 0;
+	
 }

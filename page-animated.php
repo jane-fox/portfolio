@@ -13,7 +13,7 @@ get_header();
 
 <div class="parallax color-bg" id="parallax-container">
 	<div class="layer" data-depth="0.10"> 
-		<canvas id="hex-canvas1"></canvas>
+		<canvas id="hex-canvas"></canvas>
 	</div>
 	<div class="layer" data-depth="0.50"> 
 		<canvas id="hex-canvas2"></canvas>
@@ -40,15 +40,42 @@ get_header();
 
 
 <div class="container">
+<div class="row">
 
-	<h2> Extra content down here </h2>
+	<h2> What I can do for you. </h2>
+	<hr>
 
-	<h3> wordpress</h3>
-	<h3> javascript</h3>
-	<h3> everything</h3>
+	<div class="col-md-4">
+		<div style="text-align: center;font-size: 64px;">
+			<span class="glyphicon glyphicon-object-align-top"></span>
+		</div>
+		<h3>Best solution for your needs</h3>
+		<p>With a variety of different tools, we can find the best tech for your exact requirements.</p>
+
+	</div>
+
+	<div class="col-md-4">
+		<div style="text-align: center;font-size: 64px;">
+			<span class="glyphicon glyphicon-cog"></span>
+		</div>
+		<h3>Wordpress Setup & Customization</h3>
+		<p>The best fit for most needs! Bring your idea online fast, with any theme you need.</p>
+
+	</div>
+
+	<div class="col-md-4">
+		<div style="text-align: center;font-size: 64px;">
+			<span class="glyphicon glyphicon-wrench"></span>
+		</div>
+		<h3>Bugfixing</h3>
+		<p>Having trouble with a website? Original developer not able to help? I can quickly jump in to any project and start making things work.</p>
+
+	</div>
 
 </div>
+</div>
 
+<hr>
 
 
 <script>

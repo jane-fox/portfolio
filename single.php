@@ -11,7 +11,7 @@ get_header(); ?>
 
 <header class="color-bg">
 	<div class="container">
-		<h1><?php the_title(); ?></h1>
+		<h1 class="page-title"><?php the_title(); ?></h1>
 	</div>
 </header>
 
@@ -28,7 +28,7 @@ if( $above_page ): ?>
     	<div class="container">
 
 	    	<?php foreach ( $above_page as $image ) { ?>
-	    		<div class="col-sm-3 project-thumb">
+	    		<div class="col-xs-6 col-sm-3 project-thumb">
 		    		<a class=""
 	    			   href="<?php echo $image["url"]; ?>"
 	    			   data-lightbox="header"
