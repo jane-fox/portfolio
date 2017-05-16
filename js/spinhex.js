@@ -3,10 +3,9 @@
 var size = 200;
 var spacing = 0;
 var thickness = 30;
-var color = '#639';
+var color = '#5a555f';
 //Var color = "#5a555f";
 //var color = "#e8624c";
-
 
 
 
@@ -29,53 +28,34 @@ function js_gif( options ) {
 
 
 	//Set defaults for options
-	var options = options || {};
+	options = options || {};
 	options.target = options.target || {};
 
 
 	//Setup variables
 	//var encoder = new GIFEncoder();
 	var canvas = document.getElementById( 'hex-canvas' );
-	var canvas2 = document.getElementById( 'hex-canvas2' );
-	var canvas3 = document.getElementById( 'hex-canvas3' );
 	var ctx = canvas.getContext( '2d' );
-	var ctx2 = canvas2.getContext( '2d' );
-	var ctx3 = canvas3.getContext( '2d' );
-
 	var width = window.innerWidth + 400;
 	var height = 800;
 	//Var height = window.innerHeight;
 
 	canvas.width = width;
-	canvas2.width = width;
-	canvas3.width = width;
-
 	canvas.height = height;
-	canvas2.height = height;
-	canvas3.height = height;
 
 	var bg_color = '#409';
 
+	// A canvas to draw our hexagon on, to re-use in tiling
 	var hex_canvas = document.createElement( 'canvas' );
-	var hex_canvas2 = document.createElement( 'canvas' );
-	var hex_canvas3 = document.createElement( 'canvas' );
+	hex_canvas.width = size * 5;
+	hex_canvas.height = size * 5;
 	var hex_ctx = hex_canvas.getContext( '2d' );
-	var hex_ctx2 = hex_canvas2.getContext( '2d' );
-	var hex_ctx3 = hex_canvas3.getContext( '2d' );
-		hex_canvas.width = hex_canvas.height = size * 4;
-		hex_canvas2.width = hex_canvas2.height = size * 4;
-		hex_canvas3.width = hex_canvas3.height = size * 4;
 
 	// Default line style
 	hex_ctx.strokeStyle = color;
-	hex_ctx2.strokeStyle = color;
-	hex_ctx3.strokeStyle = color;
-
-	hex_ctx.fillStyle = hex_ctx2.fillStyle = hex_ctx3.fillStyle = color;
-
-	hex_ctx.lineCap = hex_ctx2.lineCap = hex_ctx3.lineCap  = 'round';
-
-	hex_ctx.lineWidth = hex_ctx2.lineWidth = hex_ctx3.lineWidth = thickness;
+	hex_ctx.fillStyle = color;
+	hex_ctx.lineCap = 'round';
+	hex_ctx.lineWidth = thickness;
 
 	var angles = [];
 	var points = [];
@@ -116,30 +96,23 @@ function js_gif( options ) {
 
 	var animation_step = function() {
 
-		frame += .2;
+		frame += 0.2;
 
 		//Frame = 0;
 
 		ctx.clearRect( 0, 0, canvas.width, canvas.height );
-		ctx2.clearRect( 0, 0, canvas.width, canvas.height );
-		ctx3.clearRect( 0, 0, canvas.width, canvas.height );
 
 		hex_ctx.clearRect( 0, 0, hex_canvas.width, hex_canvas.height );
-		hex_ctx2.clearRect( 0, 0, hex_canvas.width, hex_canvas.height );
-		hex_ctx3.clearRect( 0, 0, hex_canvas.width, hex_canvas.height );
 
 		//Hex_ctx.rect(0,0,hex_canvas.width, hex_canvas.height);
 
 		//hex_ctx.stroke();
 
 		hex_ctx.beginPath();
-		hex_ctx2.beginPath();
-		hex_ctx3.beginPath();
 
 
 		// The hexagons are made of 3 parts that connect together
 		// Rotating canvas in place is difficult, so just redraw the parts
-
 
 
 		///1st seciton
@@ -158,15 +131,15 @@ function js_gif( options ) {
 		var new_x_2 = points[1].x + size * Math.cos( ( frame - 180 ) * Math.PI / 180 );
 		var new_y_2 = points[1].y + size * Math.sin( ( frame - 180 ) * Math.PI / 180 );
 
-		hex_ctx2.moveTo( points[3].x, points[3].y );
-		hex_ctx2.lineTo( points[3].x + size * Math.cos( ( frame + 60 ) * Math.PI / 180 ), points[3].y + size * Math.sin( ( frame + 60 ) * Math.PI / 180 ) );
+		hex_ctx.moveTo( points[3].x, points[3].y );
+		hex_ctx.lineTo( points[3].x + size * Math.cos( ( frame + 60 ) * Math.PI / 180 ), points[3].y + size * Math.sin( ( frame + 60 ) * Math.PI / 180 ) );
 
 		///3rd seciton
 		//hex_ctx3.moveTo(points[5].x, points[5].y);
 		//hex_ctx3.lineTo(points[5].x + size * Math.cos((frame+60)*Math.PI/180), points[5].y + size * Math.sin((frame+60)*Math.PI/180));
 
-		hex_ctx3.moveTo( points[5].x, points[5].y );
-		hex_ctx3.lineTo( points[5].x + size * Math.cos( ( frame - 180 ) * Math.PI / 180 ), points[5].y + size * Math.sin( ( frame - 180 ) * Math.PI / 180 ) );
+		hex_ctx.moveTo( points[5].x, points[5].y );
+		hex_ctx.lineTo( points[5].x + size * Math.cos( ( frame - 180 ) * Math.PI / 180 ), points[5].y + size * Math.sin( ( frame - 180 ) * Math.PI / 180 ) );
 
 
 
@@ -174,12 +147,8 @@ function js_gif( options ) {
 		//Draw polygon
 		//context.fill();
 		hex_ctx.stroke();
-		hex_ctx2.stroke();
-		hex_ctx3.stroke();
 
 		hex_ctx.closePath();
-		hex_ctx2.closePath();
-		hex_ctx3.closePath();
 
 
 		//Hex_ctx.beginPath();
@@ -204,8 +173,6 @@ function js_gif( options ) {
 				var pos = get_pos( a, b );
 				//Draw_hex(pos.x, pos.y);
 				ctx.drawImage( hex_canvas, pos.x, pos.y );
-				ctx2.drawImage( hex_canvas2, pos.x, pos.y );
-				ctx3.drawImage( hex_canvas3, pos.x, pos.y );
 
 			}
 

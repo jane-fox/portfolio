@@ -184,19 +184,36 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-#parallax-container {
-	margin-bottom: -100px;
+#animation-container {
+	position: relative;
+
+	// Pulls it up under header
 	top: -100px;
+
+	// Pulls content up below to compensate
+	margin-bottom: -100px;
+
 	overflow: hidden;
 	height: 500px;
 	width: 100%; 
 
 	.layer  {
 		width: 100%;
+
 		canvas {
 			position: absolute;
 			left: -200px;
 			top: -100px;
+			z-index: 10;
+		}
+		.content {
+			z-index: 100;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding-bottom: 100px;
 		}
 	}
 }
@@ -261,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-gallery {
 	width: 100%;
-	background-color: $color-second;
+	//background-color: $color-second;
 	padding: $tightness*2 0;
 
 	a {

@@ -11,28 +11,22 @@ get_header();
 ?>
 
 
-<div class="parallax color-bg" id="parallax-container">
+<div class="color-bg" id="animation-container">
 	<div class="layer" data-depth="0.30"> 
 		<canvas id="hex-canvas"></canvas>
 	</div>
-	<div class="layer" data-depth="0.50"> 
-		<canvas id="hex-canvas2"></canvas>
-	</div>
-	<div class="layer" data-depth="0.70"> 
-		<canvas id="hex-canvas3"></canvas>
-	</div>
-
 
 	<div class="layer" data-depth=".1">
+		<div class="content">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php the_content(  ); ?>
+				<?php the_content(  ); ?>
 
-		
-		<?php endwhile; // end of the loop. ?>
+			
+			<?php endwhile; // end of the loop. ?>
 
-
+		</div>
 	</div> 
 
 </div>
@@ -122,17 +116,8 @@ get_header();
 </div>
 
 
-<script>
 
-document.addEventListener("DOMContentLoaded", function(event) { 
 
-	var container = document.getElementById("parallax-container");
-
-	new Parallax(container);
-
-});
-
-</script>
 
 
 

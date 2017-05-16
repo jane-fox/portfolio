@@ -12,7 +12,8 @@
 		text-decoration: none;
 		padding: $tightness;
 		display: block;
-
+		font-size: 16px;
+		line-height: 20px;
 	}
 	a:hover {
 		background-color: rgba(255,255,255, .1);
@@ -36,6 +37,23 @@
 	}
 
 
+	.site-title {
+		display: inline-block;
+		margin: 0;
+		a {
+			font-size: 20px;
+			background: none;
+			padding-left: 14px;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+
+} //#site-nav
+
+
+
 }
 
 //Make menu inline for non-mobile sizes
@@ -52,14 +70,6 @@
 
 
 
-.site-title {
-	display: inline-block;
-	margin: 0;
-
-	a {
-		font-size: 1.2em;
-	}
-}
 
 .site-description {
 	display: inline-block;

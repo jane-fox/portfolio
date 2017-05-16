@@ -24,7 +24,7 @@ $above_page = get_field('above_page');
 
 if( $above_page ): ?>
 
-	<div class="project-gallery">
+	<div class="alt-bg project-gallery">
     	<div class="container">
 
 	    	<?php foreach ( $above_page as $image ) { ?>
