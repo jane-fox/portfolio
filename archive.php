@@ -6,8 +6,19 @@
  *
  * @package wp-website-portfolio
  */
-
 get_header(); ?>
+
+<header class="color-bg">
+	<div class="container">
+		<h1 class="page-title"><?php the_archive_title( ); ?></h1>
+	</div>
+</header>
+
+
+<div class="container">
+<div class="row">
+
+	<div class="col-sm-9">
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -15,12 +26,7 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+			
 
 			<?php
 			/* Start the Loop */
@@ -46,6 +52,12 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_sidebar();
+</div><!-- .col -->
+
+<div class="col-sm-3"><?php get_sidebar(); ?></div>
+
+</div><!-- .row -->
+</div><!-- .container -->
+
+<?php 
 get_footer();

@@ -291,11 +291,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.tag {
-	border: 1px solid $color-main;
-	margin: 5px;
-	padding: 5px;
-	border-radius: 5px;
+.tags-links a {
+	padding: 2px;
 }
 
 .edit-link {
