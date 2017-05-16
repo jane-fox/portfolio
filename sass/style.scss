@@ -124,21 +124,18 @@ $tightness: 20px;
 //Armata%7C
 Cantarell%7C
 Maven+Pro%7C
-Source+Code+Pro%7CTitillium+Web&#038;ver=4.8-alpha-40472' type='text/css' media='all' />
+Source+Code+Pro%7C
+Titillium+Web&#038;ver=4.8-alpha-40472' type='text/css' media='all' />
 
 
-like:
-maven - smooth
-
-armata
-source - right message, wrong look
 
 */
 
 
 body {
 
-	font-family: "Cantarell";
+	//font-family: "Cantarell";
+	font-family: "Maven Pro";
 	background-color: $color-white;
 	color: $color-dark;
 }
@@ -195,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%; 
 
 	.layer  {
-
+		width: 100%;
 		canvas {
 			position: absolute;
 			left: -200px;
