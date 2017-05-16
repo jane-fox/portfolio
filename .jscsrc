@@ -1,7 +1,12 @@
 {
     "preset": "wordpress",
+  	"maxErrors": null,
     "fileExtensions": [ ".js" ],
     "excludeFiles": [
-    	"js/**.min.js"
+    	"**.map",
+    	"js/**.min.js",
+    	"js/scripts.js",
+    	"js/lightbox.js"
     ]
 }
+

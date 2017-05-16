@@ -1,1 +1,4 @@
+*.map
 js/**.min.js
+js/lightbox.js
+js/scripts.js
