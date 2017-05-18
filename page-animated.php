@@ -36,6 +36,19 @@ get_header();
 <div class="container">
 <div class="row text-center margin-bottom">
 
+<?php echo get_field("below_display"); ?>
+
+</div>
+</div>
+</div>
+
+
+
+<!-- 
+
+	Placeholder until I figure out design
+
+
 
 	<h2> What I can do for you. </h2>
 	<hr>
@@ -111,14 +124,9 @@ get_header();
 
 	</div>
 
-</div>
-</div>
-</div>
 
 
-
-
-
-
+	/ placeholder
+-->
 
 <?php get_footer(); ?>
