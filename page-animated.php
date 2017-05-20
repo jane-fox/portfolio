@@ -12,6 +12,7 @@ get_header();
 
 
 <div class="color-bg" id="animation-container">
+
 	<div class="layer" data-depth="0.30"> 
 		<canvas id="hex-canvas"></canvas>
 	</div>
@@ -19,9 +20,9 @@ get_header();
 	<div class="layer" data-depth=".1">
 		<div class="content">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts( ) ) : the_post(); ?>
 
-				<?php the_content(  ); ?>
+				<?php the_content( ); ?>
 
 			
 			<?php endwhile; // end of the loop. ?>
@@ -40,7 +41,7 @@ get_header();
 
 </div>
 </div>
-</div>
+
 
 
 
@@ -67,9 +68,9 @@ get_header();
 		<div style="text-align: center;font-size: 64px;">
 			<span class="glyphicon glyphicon-cog"></span>
 		</div>
-		<h3>Wordpress Setup & Customization</h3>
+		<h3>Wordpress Setup <br>& Customization</h3>
 		<p>The best fit for most needs! Bring your idea online fast, with any theme you need.</p>
-
+		<p>You'll be ready to start blogging, share your photography, </p>
 	</div>
 
 	<div class="col-md-4">

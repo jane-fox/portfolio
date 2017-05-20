@@ -16,10 +16,15 @@ $break-sm-up: "min-width: 768px";
 
 
 
-
+$font-size-xl: 64px;
+$font-size-text: 18px;
+$font-size-title: 36px;
+$font-size-subtitle: 24px;
 
 
 $tightness: 20px;
+
+
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -54,7 +59,6 @@ $tightness: 20px;
 
 // Lightbox
 @import "lightbox";
-
 
 
 
@@ -169,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .page-title {
-	font-size: 32px;
+	font-size: $font-size-title;
 	margin: 0;
 	padding: $tightness*2 0;
 }
@@ -196,6 +200,14 @@ h1, h2, h3, h4, h5, h6 {
 	overflow: hidden;
 	height: 500px;
 	width: 100%; 
+
+	h1 {
+		font-size: $font-size-xl;
+	}
+	p {
+		font-size: $font-size-subtitle;
+	}
+
 
 	.layer  {
 		width: 100%;
@@ -235,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .widget-title {
-	font-size: 20px;
+	font-size: $font-size-subtitle;
 	color: $color-dark;
 }
 
@@ -328,6 +340,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #primary {
-	margin: $tightness*2 0;
+	//margin: $tightness*2 0;
 
 }

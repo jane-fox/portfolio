@@ -45,16 +45,10 @@ textarea {
 	background-color: $color-white;
 	border-radius: 5px;
 	padding: 5px;
+	width: 100%;
 
 	&:focus {
 		color: $color-dark;
 	}
 }
 
-select {
-	border: 1px solid $color__border-input;
-}
-
-textarea {
-	width: 100%;
-}
