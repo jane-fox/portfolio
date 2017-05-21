@@ -8,16 +8,22 @@
  */
 
 get_header();
+
+while ( have_posts() ) : the_post(); 
+
 ?>
 
+<header class="color-bg">
+	<div class="container">
+		<h1 class="page-title"><?php the_title(); ?></h1>
+	</div>
+</header>
 
-	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php the_content(  ); ?>
+<?php the_content(  ); ?>
 
 	
-	<?php endwhile; // end of the loop. ?>
-
-
+	
+<?php endwhile;  ?>
 
 <?php get_footer(); ?>

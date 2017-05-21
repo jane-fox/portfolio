@@ -59,7 +59,5 @@
     </div></div><!-- .row .container -->
 </header><!-- #masthead -->
 
-<div id="content" class="site-content">
-
             
 <?php /*  <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wp-website-portfolio' ); ?></button> */ ?>

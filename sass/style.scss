@@ -1,28 +1,5 @@
 
-//#f0604c
-//$color-main: #6258ec;
-$color-main: #6050f0;
-$color-second: #d5cff5;
-
-$color-alt: #ebe9f9;
-
-$color-white: #f7f5f9;
-$color-grey: #c5c0cf;
-
-$color-dark: #5a555f;
-
-//Breakpoint for small and up 
-$break-sm-up: "min-width: 768px";
-
-
-
-$font-size-xl: 64px;
-$font-size-text: 18px;
-$font-size-title: 36px;
-$font-size-subtitle: 24px;
-
-
-$tightness: 20px;
+@import "vars";
 
 
 @import "variables-site/variables-site";
@@ -39,7 +16,6 @@ $tightness: 20px;
 @import "elements";
 
 
-@import "forms";
 
 @import "modules/accessibility";
 
@@ -58,6 +34,7 @@ $tightness: 20px;
 // Top navbar / header
 @import "nav";
 
+@import "forms";
 
 /*
 
@@ -109,6 +86,7 @@ a, a:visited {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-weight: bold;
 	margin: $tightness*2 0 $tightness 0;
 }
 
