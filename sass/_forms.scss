@@ -44,12 +44,13 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $color-grey;
+	color: $color-dark;
 	border: 2px solid $color-grey;
 	background-color: $color-white;
 	border-radius: 5px;
-	padding: 5px;
+	padding: $tightness/2;
 	width: 100%;
+	transition: 1s;
 
 	&:focus {
 		color: $color-dark;
