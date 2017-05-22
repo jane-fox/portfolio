@@ -2,9 +2,11 @@
 /**
  * Template Name: Full Width Page
  *
- * Blank page
+ * Blank page with header but no containers so 
+ * content can easily stretch to the edge of the
+ * browser, useful for bg effects. May need containers.
  *
- * @package 
+ * @package wp-portfolio
  */
 
 get_header();
@@ -12,6 +14,7 @@ get_header();
 while ( have_posts() ) : the_post(); 
 
 ?>
+
 
 <header class="color-bg">
 	<div class="container">
@@ -22,7 +25,6 @@ while ( have_posts() ) : the_post();
 
 <?php the_content(  ); ?>
 
-	
 	
 <?php endwhile;  ?>
 

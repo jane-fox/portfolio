@@ -53,6 +53,7 @@ textarea {
 
 	&:focus {
 		color: $color-dark;
+		border-color: $color-main;
 	}
 }
 
