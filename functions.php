@@ -106,7 +106,7 @@ add_action( 'widgets_init', 'wp_website_portfolio_widgets_init' );
  */
 function wp_website_portfolio_scripts() {
 
-	wp_enqueue_style( 'google-fonts', "https://fonts.googleapis.com/css?family=Armata|Cantarell|Maven+Pro|Source+Code+Pro|Titillium+Web" );
+	wp_enqueue_style( 'google-fonts', "https://fonts.googleapis.com/css?family=Maven+Pro|Open+Sans|Muli|Poppins|Oxygen|Karla" );
 	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'wp-website-portfolio-style', get_template_directory_uri() . '/css/style.css' );
 

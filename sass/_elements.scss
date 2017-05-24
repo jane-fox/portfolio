@@ -1,3 +1,6 @@
+
+@import "vars";
+
 html {
 	box-sizing: border-box;
 }
@@ -22,7 +25,7 @@ blockquote, q {
 }
 
 hr {
-	background-color: $color__background-hr;
+	background-color: $color-grey;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;

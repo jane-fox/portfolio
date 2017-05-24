@@ -2,7 +2,7 @@
 @import "vars";
 
 
-@import "variables-site/variables-site";
+//@import "variables-site/variables-site";
 @import "mixins/mixins-master";
 @import "font-awesome/font-awesome";
 
@@ -37,27 +37,19 @@
 
 @import "forms";
 
-/*
-
-//Armata%7C
-Cantarell%7C
-Maven+Pro%7C
-Source+Code+Pro%7C
-Titillium+Web&#038;ver=4.8-alpha-40472' type='text/css' media='all' />
 
 
-
-*/
 
 
 body {
 
 	//font-family: "Cantarell";
-	font-family: "Maven Pro";
+	font-family: "Oxygen";
 	background-color: $color-white;
 	color: $color-dark;
 	font-size: $font-size-text;
 }
+
 
 p {
 	margin-bottom: $tightness;
@@ -87,7 +79,7 @@ a, a:visited {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-weight: bold;
+	//font-weight: bold;
 	margin: $tightness*2 0 $tightness 0;
 }
 
@@ -262,4 +254,19 @@ h1, h2, h3, h4, h5, h6 {
 #primary {
 	//margin: $tightness*2 0;
 
+}
+
+.search-form {
+	label {
+		display: inline-block;
+		width: 69%;
+		margin-right: 5%;
+	}
+	.search-field {
+		margin: 0;
+		width: 100%;
+	}
+	.search-submit {
+
+	}
 }
