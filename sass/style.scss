@@ -2,64 +2,31 @@
 @import "vars";
 
 
-//@import "variables-site/variables-site";
-@import "mixins/mixins-master";
-@import "font-awesome/font-awesome";
-
-
 @import "normalize";
-
-
-// Lightbox
-@import "lightbox";
-
-
-@import "elements";
-
-
+@import "mixins/mixins-master";
 
 @import "modules/accessibility";
-
 @import "modules/alignments";
-
 @import "modules/clearings";
-
-@import "site/secondary/widgets";
-
-@import "site/site";
-
 @import "modules/infinite-scroll";
+
+@import "font-awesome/font-awesome";
 
 @import "media/media";
 
-// Top navbar / header
+@import "lightbox";
+
+@import "widgets";
+
 @import "nav";
 
 @import "forms";
 
 
 
+@import "elements";
 
 
-body {
-
-	//font-family: "Cantarell";
-	font-family: "Oxygen";
-	background-color: $color-white;
-	color: $color-dark;
-	font-size: $font-size-text;
-}
-
-
-p {
-	margin-bottom: $tightness;
-	line-height: 200%;
-}
-
-img.aligncenter {
-	display: block;
-	margin: 0 auto;
-}
 
 
 
@@ -71,17 +38,15 @@ img.aligncenter {
 .alt-bg {
 	background-color: $color-alt;
 }
-
-
-a, a:visited {
-	color: $color-main;
+.margin-top {
+	margin-top: $tightness;
+}
+.margin-bottom {
+	margin-bottom: $tightness*2;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-	//font-weight: bold;
-	margin: $tightness*2 0 $tightness 0;
-}
+
+
 
 
 .page-title {
@@ -137,46 +102,30 @@ h1, h2, h3, h4, h5, h6 {
 			left: 0;
 			right: 0;
 			bottom: 0;
-			padding-bottom: 100px;
+			padding-bottom: $tightness*2;
 		}
 	}
-}
-
-
-.sidebar {
-	color: $color-dark;
-
-	margin: $tightness 0;
-	padding: $tightness;
-
-	ul {
-		padding-left: 0;
-		margin-left: 0;
-	}
-	li {
-		list-style-type: none;
+	.button {
+		background-color: transparent;
 	}
 }
 
-.widget-title {
-	font-size: $font-size-subtitle;
-	color: $color-dark;
-}
 
-.widget a {
-	color: $color-grey;
-}
 
-.margin-top {
-	margin-top: $tightness;
-}
-.margin-bottom {
-	margin-bottom: $tightness*2;
-}
 
 //To make anim appear underneath
 .home #site-nav {
 	background-color: transparent;
+}
+
+.display-column {
+
+	h2,h3, h4 {
+		margin-top: $tightness/2;
+	}
+	.fa {
+		font-size: 72px;
+	}
 }
 
 
@@ -197,6 +146,9 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 }
+
+
+
 
 
 
@@ -232,6 +184,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 .tags-links a {
 	padding: 2px;
 }
@@ -251,22 +204,5 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
-#primary {
-	//margin: $tightness*2 0;
 
-}
 
-.search-form {
-	label {
-		display: inline-block;
-		width: 69%;
-		margin-right: 5%;
-	}
-	.search-field {
-		margin: 0;
-		width: 100%;
-	}
-	.search-submit {
-
-	}
-}

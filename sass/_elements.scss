@@ -5,15 +5,41 @@ html {
 	box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+body {
+
+	//font-family: "Cantarell";
+	font-family: "Oxygen";
+	background-color: $color-white;
+	color: $color-dark;
+	font-size: $font-size-text;
 }
 
-body {
-	//background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+
+p {
+	margin-bottom: $tightness;
+	line-height: 200%;
 }
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	//font-weight: bold;
+	margin: $tightness*2 0 $tightness 0;
+}
+
+a, a:visited {
+	color: $color-main;
+	font-weight: normal;
+	line-height: 200%;
+	
+}
+
+img.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+
 
 blockquote, q {
 	quotes: "" "";
