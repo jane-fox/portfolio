@@ -17,12 +17,19 @@
 	overflow: hidden;
 	height: 500px;
 	width: 100%; 
+	text-align: center;
 
 	h1 {
 		font-size: $font-size-title;
 	}
 	p {
-		font-size: $font-size-big;
+		//font-size: $font-size-big;
+		margin: 0;
+	}
+
+	//Make the call to action have a little spacing above.
+	.button {
+		margin-top: $tightness*2;
 	}
 
 
@@ -58,13 +65,14 @@
 	//background-color: transparent;
 }
 
+
 @media ($break-sm-up) {
 	#animation-container {
 		h1 {
 			font-size: $font-size-xl;
 		}
 		p {
-			font-size: $font-size-subtitle;
+			font-size: $font-size-big;
 		}
 	}
 }
