@@ -1,10 +1,14 @@
 
 
 #site-nav {
-	z-index: 999;
+	//z-index: 5;
 	border-radius: 0;
 	margin: 0;
 	padding: 0;
+	.container {
+		z-index: 11;
+		position: relative;
+	}
 
 
 	a {
@@ -18,8 +22,8 @@
 	a:hover {
 		background-color: rgba(255,255,255, .1);
 	}
-	.active a {
-		background-color: rgba(0,0,0, .1);
+	.current_page_item a {
+		//background-color: rgba(0,0,0, .1);
 	}
 
 	ul {
@@ -30,12 +34,12 @@
 		list-style-type: none;
 		display: block;
 	}
+
 	.navbar-toggle {
 		font-size: 24px;
 		color: $color-white;
 
 	}
-
 
 	.site-title {
 		display: inline-block;
@@ -49,12 +53,19 @@
 			}
 		}
 
+	} 
+
+
 
 } //#site-nav
 
 
-
+.site-description {
+	display: inline-block;
+	margin: 0;
+	color: $color-grey;
 }
+
 
 //Make menu inline for non-mobile sizes
 @media ($break-sm-up) {
@@ -70,9 +81,3 @@
 
 
 
-
-.site-description {
-	display: inline-block;
-	margin: 0;
-	color: $color-grey;
-}

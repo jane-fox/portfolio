@@ -22,11 +22,11 @@
 
 @import "forms";
 
+@import "animation";
+
 
 
 @import "elements";
-
-
 
 
 
@@ -35,18 +35,19 @@
 	background-color: $color-main;
 	color: $color-white;
 }
+
 .alt-bg {
 	background-color: $color-alt;
 	padding-bottom: $tightness;
 }
+
 .margin-top {
 	margin-top: $tightness;
 }
+
 .margin-bottom {
 	margin-bottom: $tightness*2;
 }
-
-
 
 
 
@@ -54,6 +55,19 @@
 	font-size: $font-size-title;
 	margin: 0;
 	padding: $tightness*2 0;
+}
+
+
+
+
+.display-column {
+
+	h2,h3, h4 {
+		margin-top: $tightness/2;
+	}
+	.fa {
+		font-size: 72px;
+	}
 }
 
 
@@ -69,71 +83,6 @@
 	}
 }
 
-
-
-
-#animation-container {
-	position: relative;
-
-	// Pulls it up under header
-	top: -100px;
-
-	// Pulls content up below to compensate
-	margin-bottom: -100px;
-
-	overflow: hidden;
-	height: 500px;
-	width: 100%; 
-
-	h1 {
-		font-size: $font-size-xl;
-	}
-	p {
-		font-size: $font-size-subtitle;
-	}
-
-
-	.layer  {
-		width: 100%;
-
-		canvas {
-			position: absolute;
-			left: -200px;
-			top: -100px;
-			z-index: 10;
-		}
-		.content {
-			z-index: 100;
-			position: absolute;
-			width: 100%;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			padding-bottom: $tightness*2;
-		}
-	}
-	.button {
-		background-color: transparent;
-	}
-}
-
-
-
-
-//To make anim appear underneath
-.home #site-nav {
-	background-color: transparent;
-}
-
-.display-column {
-
-	h2,h3, h4 {
-		margin-top: $tightness/2;
-	}
-	.fa {
-		font-size: 72px;
-	}
-}
 
 
 
