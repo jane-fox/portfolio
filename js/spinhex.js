@@ -64,6 +64,7 @@ function js_gif( options ) {
 	angles[2] = new angle( size, 4 );
 
 	var frame = 0;
+	var speed = 0.5;
 	var total_frames = 73;
 	var compile_gif = false;
 	var gif_done = false;
@@ -97,16 +98,12 @@ function js_gif( options ) {
 	var animation_step = function() {
 
 		frame += 0.2;
+		speed += 0.5;
 
-		//Frame = 0;
 
 		ctx.clearRect( 0, 0, canvas.width, canvas.height );
-
 		hex_ctx.clearRect( 0, 0, hex_canvas.width, hex_canvas.height );
 
-		//Hex_ctx.rect(0,0,hex_canvas.width, hex_canvas.height);
-
-		//hex_ctx.stroke();
 
 		hex_ctx.beginPath();
 
@@ -114,32 +111,28 @@ function js_gif( options ) {
 		// The hexagons are made of 3 parts that connect together
 		// Rotating canvas in place is difficult, so just redraw the parts
 
-
 		///1st seciton
-		//hex_ctx.moveTo(points[1].x, points[1].y);
-
-		var new_x_1 = points[1].x + size * Math.cos( ( frame - 180 ) * Math.PI / 180 );
-		var new_y_1 = points[1].y + size * Math.sin( ( frame - 180 ) * Math.PI / 180 );
+		var new_x_1 = points[1].x + size * Math.cos( ( frame - 60 ) * Math.PI / 180 );
+		var new_y_1 = points[1].y + size * Math.sin( ( frame - 60 ) * Math.PI / 180 );
 
 		hex_ctx.moveTo( points[1].x, points[1].y );
-		hex_ctx.lineTo( points[1].x + size * Math.cos( ( frame - 60 ) * Math.PI / 180 ), points[1].y + size * Math.sin( ( frame - 60 ) * Math.PI / 180 ) );
+		hex_ctx.lineTo( new_x_1, new_y_1);
+
 
 		///2nd seciton
-		//hex_ctx2.moveTo(points[3].x, points[3].y);
-		//hex_ctx2.lineTo(points[3].x + size * Math.cos((frame-60)*Math.PI/180), points[3].y + size * Math.sin((frame-60)*Math.PI/180));
-
-		var new_x_2 = points[1].x + size * Math.cos( ( frame - 180 ) * Math.PI / 180 );
-		var new_y_2 = points[1].y + size * Math.sin( ( frame - 180 ) * Math.PI / 180 );
+		var new_x_2 = points[3].x + size * Math.cos( ( frame + 60 ) * Math.PI / 180 );
+		var new_y_2 = points[3].y + size * Math.sin( ( frame + 60 ) * Math.PI / 180 );
 
 		hex_ctx.moveTo( points[3].x, points[3].y );
-		hex_ctx.lineTo( points[3].x + size * Math.cos( ( frame + 60 ) * Math.PI / 180 ), points[3].y + size * Math.sin( ( frame + 60 ) * Math.PI / 180 ) );
+		hex_ctx.lineTo( new_x_2, new_y_2 );
+
 
 		///3rd seciton
-		//hex_ctx3.moveTo(points[5].x, points[5].y);
-		//hex_ctx3.lineTo(points[5].x + size * Math.cos((frame+60)*Math.PI/180), points[5].y + size * Math.sin((frame+60)*Math.PI/180));
+		var new_x_3 = points[5].x + size * Math.cos( ( frame - 180 ) * Math.PI / 180 );
+		var new_y_3 = points[5].y + size * Math.sin( ( frame - 180 ) * Math.PI / 180 );
 
 		hex_ctx.moveTo( points[5].x, points[5].y );
-		hex_ctx.lineTo( points[5].x + size * Math.cos( ( frame - 180 ) * Math.PI / 180 ), points[5].y + size * Math.sin( ( frame - 180 ) * Math.PI / 180 ) );
+		hex_ctx.lineTo( new_x_3, new_y_3 );
 
 
 
@@ -151,18 +144,22 @@ function js_gif( options ) {
 		hex_ctx.closePath();
 
 
-		//Hex_ctx.beginPath();
+		hex_ctx.beginPath();
+		hex_ctx.arc(new_x_3, new_y_3, 30, 0, Math.PI*2);
+		hex_ctx.fill();
+		hex_ctx.closePath();
 
-		//hex_ctx.fill();
+		hex_ctx.beginPath();
+		hex_ctx.arc(new_x_1, new_y_1, 30, 0, Math.PI*2);
+		hex_ctx.fill();
+		hex_ctx.closePath();
 
-		//hex_ctx.closePath();
+		hex_ctx.beginPath();
+		hex_ctx.arc(new_x_2, new_y_2, 30, 0, Math.PI*2);
+		hex_ctx.fill();
+		hex_ctx.closePath();
 
 
-
-
-		//ctx.drawImage(hex_canvas, 100,100);
-
-		//ctx.drawImage(test, frame, 100);
 
 
 		//Loop through to draw tons of hexagons to fill the screen!
@@ -275,4 +272,3 @@ var angle = function( size, offset ) {
 	context.closePath();
 
 };
-
