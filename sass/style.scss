@@ -81,6 +81,7 @@
 	background-color: $color-dark;
 	color: #FFF;
 	padding: $tightness*2 0;
+	margin-top: $tightness*2;
 
 	a, a:hover { 
 		color: $color-white;
@@ -88,8 +89,6 @@
 		margin-right: $tightness;
 	}
 }
-
-
 
 
 .post-list {
@@ -165,6 +164,3 @@
 .entry-content {
 	margin: 0;
 }
-
-
-
