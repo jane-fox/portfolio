@@ -100,11 +100,14 @@ function js_gif( options ) {
 		frame += 1;
 
 		//speed = Math.cos(frame/100)/10;
-		var change = Math.sin(frame / 60);
+		var change = Math.sin(frame / 60) ;
+		//var change =1;
+
+		// Not actually sure how this part works, but it makes the point go round in a circle
+		var circular = Math.PI / 180;
 
 		speed = Math.PI / 180;
 		console.log(change);
-
 
 
 		ctx.clearRect( 0, 0, canvas.width, canvas.height );
@@ -115,28 +118,27 @@ function js_gif( options ) {
 
 
 		// The hexagons are made of 3 parts that connect together
-		// Rotating canvas in place is difficult, so just redraw the parts
-
+		// Rotating canvas in place is a bit difficult, so just redraw the parts
 
 		///1st seciton
-		var new_x_1 = points[1].x + size * Math.cos( ( frame - 60 ) * speed + change );
-		var new_y_1 = points[1].y + size * Math.sin( ( frame - 60 ) * speed + change );
+		var new_x_1 = points[1].x + size * Math.cos( ( frame - 60 ) * circular + change );
+		var new_y_1 = points[1].y + size * Math.sin( ( frame - 60  ) * circular + change  );
 
 		hex_ctx.moveTo( points[1].x, points[1].y );
 		hex_ctx.lineTo( new_x_1, new_y_1);
 
 
 		///2nd seciton
-		var new_x_2 = points[3].x + size * Math.cos( ( frame + 60 ) * speed + change );
-		var new_y_2 = points[3].y + size * Math.sin( ( frame + 60 ) * speed + change );
+		var new_x_2 = points[3].x + size * Math.cos( ( frame + 60  ) * circular + change  );
+		var new_y_2 = points[3].y + size * Math.sin( ( frame + 60  ) * circular + change  );
 
 		hex_ctx.moveTo( points[3].x, points[3].y );
 		hex_ctx.lineTo( new_x_2, new_y_2 );
 
 
 		///3rd seciton
-		var new_x_3 = points[5].x + size * Math.cos( ( frame - 180 ) * speed + change );
-		var new_y_3 = points[5].y + size * Math.sin( ( frame - 180 ) * speed + change );
+		var new_x_3 = points[5].x + size * Math.cos( ( frame - 180 ) * circular + change  );
+		var new_y_3 = points[5].y + size * Math.sin( ( frame - 180  ) * circular + change  );
 
 		hex_ctx.moveTo( points[5].x, points[5].y );
 		hex_ctx.lineTo( new_x_3, new_y_3 );
