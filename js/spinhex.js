@@ -4,6 +4,7 @@ var size = 200;
 var spacing = 0;
 var thickness = 30;
 var color = '#5a555f';
+var color_accent = '#6050f0';
 //Var color = "#5a555f";
 //var color = "#e8624c";
 
@@ -114,11 +115,12 @@ function js_gif( options ) {
 		hex_ctx.clearRect( 0, 0, hex_canvas.width, hex_canvas.height );
 
 
-		hex_ctx.beginPath();
 
 
 		// The hexagons are made of 3 parts that connect together
 		// Rotating canvas in place is a bit difficult, so just redraw the parts
+		hex_ctx.beginPath();
+
 
 		///1st seciton
 		var new_x_1 = points[1].x + size * Math.cos( ( frame - 60 ) * circular + change );
@@ -143,30 +145,49 @@ function js_gif( options ) {
 		hex_ctx.moveTo( points[5].x, points[5].y );
 		hex_ctx.lineTo( new_x_3, new_y_3 );
 
-
-
-
-		//Draw polygon
-		//context.fill();
+		// finish main hexgon section
 		hex_ctx.stroke();
-
 		hex_ctx.closePath();
 
 
+		hex_ctx.fillStyle = color;
+
+		// Circle tips at the end of the line
 		hex_ctx.beginPath();
-		hex_ctx.arc(new_x_3, new_y_3, 30, 0, Math.PI*2);
+		hex_ctx.arc(new_x_3, new_y_3, thickness, 0, Math.PI*2);
+		hex_ctx.fill();
+		hex_ctx.closePath();
+
+		// Each must begin and close seperately or it will fill the space between
+		hex_ctx.beginPath();
+		hex_ctx.arc(new_x_1, new_y_1, thickness, 0, Math.PI*2);
 		hex_ctx.fill();
 		hex_ctx.closePath();
 
 		hex_ctx.beginPath();
-		hex_ctx.arc(new_x_1, new_y_1, 30, 0, Math.PI*2);
+		hex_ctx.arc(new_x_2, new_y_2, thickness, 0, Math.PI*2);
+		hex_ctx.fill();
+		hex_ctx.closePath();
+
+
+		hex_ctx.fillStyle = color_accent;
+
+		// Inner circles
+		hex_ctx.beginPath();
+		hex_ctx.arc(new_x_1, new_y_1, thickness/2, 0, Math.PI*2);
 		hex_ctx.fill();
 		hex_ctx.closePath();
 
 		hex_ctx.beginPath();
-		hex_ctx.arc(new_x_2, new_y_2, 30, 0, Math.PI*2);
+		hex_ctx.arc(new_x_2, new_y_2, thickness/2, 0, Math.PI*2);
 		hex_ctx.fill();
 		hex_ctx.closePath();
+
+		hex_ctx.beginPath();
+		hex_ctx.arc(new_x_3, new_y_3, thickness/2, 0, Math.PI*2);
+		hex_ctx.fill();
+		hex_ctx.closePath();
+
 
 
 
