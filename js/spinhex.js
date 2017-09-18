@@ -13,7 +13,7 @@ var color_accent = '#6050f0';
 // Start script on page load
 document.addEventListener( 'DOMContentLoaded', function( event ) {
 
-	console.log( 'Loaded!' );
+	//console.log( 'Loaded!' );
 
 	var canvas = document.getElementById( 'hex-canvas' );
 
@@ -108,7 +108,7 @@ function js_gif( options ) {
 		var circular = Math.PI / 180;
 
 		speed = Math.PI / 180;
-		console.log(change);
+		//console.log(change);
 
 
 		ctx.clearRect( 0, 0, canvas.width, canvas.height );
@@ -169,7 +169,7 @@ function js_gif( options ) {
 		hex_ctx.fill();
 		hex_ctx.closePath();
 
-
+		/*
 		hex_ctx.fillStyle = color_accent;
 
 		// Inner circles
@@ -187,7 +187,7 @@ function js_gif( options ) {
 		hex_ctx.arc(new_x_3, new_y_3, thickness/2, 0, Math.PI*2);
 		hex_ctx.fill();
 		hex_ctx.closePath();
-
+		*/
 
 
 
