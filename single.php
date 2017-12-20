@@ -18,30 +18,34 @@ get_header(); ?>
 
 <?php
 
-// Get custom gallery for project heading display
-$above_page = get_field('above_page');
+if (function_exists('get_field')) { 
+
+	// Get custom gallery for project heading display
+	$above_page = get_field('above_page');
 
 
-if( $above_page ): ?>
+	if( $above_page ): ?>
 
-	<div class="alt-bg project-gallery">
-    	<div class="container">
+		<div class="alt-bg project-gallery">
+	    	<div class="container">
 
-	    	<?php foreach ( $above_page as $image ) { ?>
-	    		<div class="col-xs-6 col-sm-3 project-thumb">
-		    		<a class=""
-	    			   href="<?php echo $image["url"]; ?>"
-	    			   data-lightbox="header"
-	    			   data-title="<?php echo $image["title"]; ?>"
-		    		>
-		    			<img src="<?php echo $image["sizes"]["thumbnail"]; ?>" alt="alt test">
-	    			</a>
-    			</div>
-	    	<?php } //foreach ?>
+		    	<?php foreach ( $above_page as $image ) { ?>
+		    		<div class="col-xs-6 col-sm-3 project-thumb">
+			    		<a class=""
+		    			   href="<?php echo $image["url"]; ?>"
+		    			   data-lightbox="header"
+		    			   data-title="<?php echo $image["title"]; ?>"
+			    		>
+			    			<img src="<?php echo $image["sizes"]["thumbnail"]; ?>" alt="alt test">
+		    			</a>
+	    			</div>
+		    	<?php } //foreach ?>
 
-	    </div><!-- .container -->
-    </div><!-- .gallery -->
-<?php endif; ?>
+		    </div><!-- .container -->
+	    </div><!-- .gallery -->
+	<?php endif; ?>
+	
+<?php } // if ?>
 
 
 <div class="container">

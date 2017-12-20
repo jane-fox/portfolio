@@ -33,14 +33,15 @@ get_header();
 </div>
 
 
+<?php if (function_exists('get_field')) { ?>
+	<div class="container">
+	<div class="row text-center margin-bottom">
 
-<div class="container">
-<div class="row text-center margin-bottom">
+		<?php echo get_field("below_display"); ?>
 
-<?php echo get_field("below_display"); ?>
-
-</div>
-</div>
+	</div>
+	</div>
+<?php } // if ?>
 
 
 

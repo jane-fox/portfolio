@@ -1,12 +1,13 @@
 {
   "name": "wp-website-portfolio",
-  "version": "1.0.0",
-  "description": "===Bootstrap Basic=== Author: Vee Winch Author URI: http://rundiz.com Description: Bootstrap v.3 basic theme. For build new theme based on Bootstrap. Text Domain: bootstrap-basic Domain Path: /languages/ Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, front-page-post-form, post-formats, threaded-comments, translation-ready",
+  "version": "1.0.1",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp watch"
   },
-    "dependencies": {
+  "dependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^2.0.0",
@@ -16,6 +17,6 @@
     "gulp-uglify": "^2.1.0",
     "gulp-watch": "^4.3.11"
   },
-  "author": "",
+  "author": "Jane F",
   "license": "ISC"
 }

@@ -9,11 +9,9 @@
 
 ?>
 
-<?php echo get_field("html"); ?>
+<?php if (function_exists('get_field')) { ?>
 
+	<?php echo get_field("html"); ?>
+	
+<?php } // if ?>
 
-<?php while ( have_posts( ) ) : the_post(); ?>
-
-	<?php //the_content( ); ?>
-
-<?php endwhile; ?>
