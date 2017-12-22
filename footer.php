@@ -2,15 +2,13 @@
 /**
  * The template for displaying the footer
  *
- * Contains the closing of the #content div and all content after.
- *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package wp-website-portfolio
  */
-
 ?>
 
+</main>
 
 <footer id="site-footer" role="contentinfo">
 	<div class="container">
@@ -33,8 +31,13 @@
 	</div><!-- .container -->
 </footer><!-- #site-footer -->
 
+
+<?php include_once("analytics.php") ?>
+
+<!-- wp_footer -->
 <?php wp_footer(); ?>
+<!-- /wp_footer -->
+
 
 </body>
 </html>
-

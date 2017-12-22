@@ -14,16 +14,15 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png">
 
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<?php include_once("analytics.php") ?>
 
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-website-portfolio' ); ?></a>
 
@@ -63,5 +62,6 @@
     </div></div><!-- .row .container -->
 </header><!-- #masthead -->
 
+<main id="content">
             
 <?php /*  <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wp-website-portfolio' ); ?></button> */ ?>

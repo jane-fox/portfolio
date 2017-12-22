@@ -1,9 +1,6 @@
 
 @import "vars";
 
-html {
-	box-sizing: border-box;
-}
 
 body {
 
@@ -12,8 +9,19 @@ body {
 	background-color: $color-white;
 	color: $color-dark;
 	font-size: $font-size-text;
+
+
+	min-height: 100vh;
+}
+body.admin-bar {
+	//margin-top: -32px;
 }
 
+#content {
+	display: flex;
+	flex-direction: column;
+	//flex-grow: 2;
+}
 
 p {
 	margin-bottom: $tightness;
