@@ -4,7 +4,6 @@
 
 body {
 
-	//font-family: "Cantarell";
 	font-family: "Oxygen";
 	background-color: $color-white;
 	color: $color-dark;
@@ -12,15 +11,16 @@ body {
 
 
 	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
 }
 body.admin-bar {
 	//margin-top: -32px;
 }
 
 #content {
-	display: flex;
-	flex-direction: column;
-	//flex-grow: 2;
+	flex-grow: 2;
 }
 
 p {
