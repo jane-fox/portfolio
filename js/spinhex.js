@@ -4,8 +4,8 @@ var size = 200;
 var spacing = 0;
 var thickness = 30;
 var color = '#5a555f';
+//var color = '#2A253A';
 var color_accent = '#6050f0';
-//Var color = "#5a555f";
 //var color = "#e8624c";
 
 

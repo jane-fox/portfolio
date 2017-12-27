@@ -78,7 +78,7 @@
 	background-color: $color-dark;
 	color: #FFF;
 	padding: $tightness*2 0;
-	margin-top: $tightness*2;
+	margin: 0;
 
 	a, a:hover { 
 		color: $color-white;
@@ -144,6 +144,7 @@
 
 
 .tags-links a {
+	color: $color-grey;
 	padding: 2px;
 }
 
