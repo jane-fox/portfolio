@@ -3,9 +3,11 @@
 var size = 200;
 var spacing = 0;
 var thickness = 30;
-var color = '#5a555f';
+//var color = '#5a555f';
 //var color = '#2A253A';
-var color_accent = '#6050f0';
+var color = '#5123bb';
+//var color_accent = '#6050f0';
+var color_accent = '#572ac3';
 //var color = "#e8624c";
 
 
