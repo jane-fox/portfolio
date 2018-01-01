@@ -3,13 +3,7 @@
 var size = 200;
 var spacing = 0;
 var thickness = 30;
-//var color = '#5a555f';
-//var color = '#2A253A';
-var color = '#5123bb';
-//var color_accent = '#6050f0';
-var color_accent = '#572ac3';
-//var color = "#e8624c";
-
+var color = '#5229CC';
 
 
 // Start script on page load
@@ -170,26 +164,6 @@ function js_gif( options ) {
 		hex_ctx.arc(new_x_2, new_y_2, thickness, 0, Math.PI*2);
 		hex_ctx.fill();
 		hex_ctx.closePath();
-
-		/*
-		hex_ctx.fillStyle = color_accent;
-
-		// Inner circles
-		hex_ctx.beginPath();
-		hex_ctx.arc(new_x_1, new_y_1, thickness/2, 0, Math.PI*2);
-		hex_ctx.fill();
-		hex_ctx.closePath();
-
-		hex_ctx.beginPath();
-		hex_ctx.arc(new_x_2, new_y_2, thickness/2, 0, Math.PI*2);
-		hex_ctx.fill();
-		hex_ctx.closePath();
-
-		hex_ctx.beginPath();
-		hex_ctx.arc(new_x_3, new_y_3, thickness/2, 0, Math.PI*2);
-		hex_ctx.fill();
-		hex_ctx.closePath();
-		*/
 
 
 
