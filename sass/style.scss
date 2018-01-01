@@ -111,35 +111,48 @@
 
 
 .project-gallery {
+
+	h2, h3 {
+		margin: 0;
+		margin-bottom: $tightness
+	}
+
 	width: 100%;
 	//background-color: $color-second;
 	padding: $tightness*2 0;
 
-	a {
-		display: inline-block;
-		margin-bottom: $tightness;
+
+	.thumb-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.project-thumb {
+
+		flex: 1;
+		text-align: center;
+		margin: 0;
+		margin-right: $tightness;
+
+		img {
+			vertical-align: center;
+		}
+
+		// Remove spacing from last item
+		&:nth-child(4) {
+			margin-right: 0;
+		}
+
 		// This selects every thumb after the 4th
-
-	}
-}
-
-.project-thumb {
-	text-align: center;
-	img {
-		vertical-align: center;
-	}
-	&:nth-child(1n+5) {
-		display: none;
-	}
-}
-
-@media ($break-sm-up) {
-	.project-gallery {
-		a {
-			margin-bottom: 0;
+		&:nth-child(1n+5) {
+			display: none;
 		}
 	}
-}
+
+} // .project-gallery
+
+
 
 
 

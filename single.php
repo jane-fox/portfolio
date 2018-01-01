@@ -9,20 +9,19 @@
 
 get_header(); ?>
 
+
 <header class="color-bg">
 	<div class="container">
-		<h1 class="page-title">single<?php the_title(); ?></h1>
+		<h1 class="page-title"><?php the_title(); ?></h1>
 	</div>
 </header>
 
 
 <?php
-
 if (function_exists('get_field')) { 
 
 	// Get custom gallery for project heading display
 	$above_page = get_field('above_page');
-
 
 	if( $above_page ): ?>
 
@@ -31,22 +30,26 @@ if (function_exists('get_field')) {
 
 	    		<h2>Screenshots</h2>
 
+	    		<div class="thumb-container">
 		    	<?php foreach ( $above_page as $image ) { ?>
-		    		<div class="col-xs-6 col-sm-3 project-thumb">
-			    		<a class=""
-		    			   href="<?php echo $image["url"]; ?>"
-		    			   data-lightbox="header"
-		    			   data-title="<?php echo $image["title"]; ?>"
+			    		
+			    		<a 
+			   				class="project-thumb"
+		    				href="<?php echo $image["url"]; ?>"
+		    				data-lightbox="header"
+		    				data-title="<?php echo $image["title"]; ?>"
 			    		>
-			    			<img src="<?php echo $image["sizes"]["thumbnail"]; ?>" alt="alt test">
+			    			<img src="<?php echo $image["sizes"]["medium"]; ?>" alt="alt test">
 		    			</a>
-	    			</div>
+
 		    	<?php } //foreach ?>
+		    	</div>
 
 		    </div><!-- .container -->
 	    </div><!-- .gallery -->
+
 	<?php endif; ?>
-	
+
 <?php } // if ?>
 
 
