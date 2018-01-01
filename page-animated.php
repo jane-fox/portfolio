@@ -13,22 +13,18 @@ get_header();
 
 <div class="color-bg" id="animation-container">
 
-	<div class="layer" data-depth="0.30"> 
-		<canvas id="hex-canvas"></canvas>
+	<canvas id="hex-canvas"></canvas>
+
+	<div class="content">
+
+		<?php while ( have_posts( ) ) : the_post(); ?>
+
+			<?php the_content( ); ?>
+
+		
+		<?php endwhile; // end of the loop. ?>
+
 	</div>
-
-	<div class="layer" data-depth=".1">
-		<div class="content">
-
-			<?php while ( have_posts( ) ) : the_post(); ?>
-
-				<?php the_content( ); ?>
-
-			
-			<?php endwhile; // end of the loop. ?>
-
-		</div>
-	</div> 
 
 </div>
 

@@ -20,8 +20,8 @@ get_header(); ?>
 	</div>
 </header>
 
-<div class="container">
 
+<div class="container">
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -41,7 +41,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
-
 
 </div><!-- .container -->
 

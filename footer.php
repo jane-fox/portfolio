@@ -12,17 +12,19 @@
 
 <footer id="site-footer" role="contentinfo">
 	<div class="container">
+
 		<div class="col-sm-6">
 
 			<a href="/resume" target="_blank">
 				<span class="fa fa-file-text"></span> Resume
 			</a>
+			
 			<a href="https://github.com/jane-fox" target="_blank">
 				<span class="fa fa-github"></span> Github
 			</a>
-
 			
 		</div>
+
 
 		<div class="col-sm-6 footer-right text-right">
 			© 2017 Jane Fox
@@ -37,7 +39,6 @@
 <!-- wp_footer -->
 <?php wp_footer(); ?>
 <!-- /wp_footer -->
-
 
 </body>
 </html>

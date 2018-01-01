@@ -2,7 +2,8 @@
 /**
  * Template Name: Blank Page
  *
- * A completely blank page
+ * A completely blank page: 
+ * No header or styles, just your HTML.
  *
  * @package wp-website-portfolio
  */
@@ -14,4 +15,3 @@
 	<?php echo get_field("html"); ?>
 	
 <?php } // if ?>
-

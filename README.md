@@ -13,8 +13,18 @@ During development use `gulp watch` to watch JS and CSS files and automatically 
 If adding new scripts or styles, update the gulp file instead of the standard wordpress enque, so they all stay minified together for the fastest load. 
 
 
+### Notes
+
+I change the design and content of various parts frequently, so some of the areas are just html inputs, for my convenience.
+
+Requires a few ACF fields for full display. Example export included in source.
+
+
+
 ### Thanks
 
 https://github.com/Automattic/_s
+
+https://www.advancedcustomfields.com/
 
 https://github.com/lokesh/lightbox2/

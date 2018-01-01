@@ -11,7 +11,7 @@ get_header(); ?>
 
 <header class="color-bg">
 	<div class="container">
-		<h1 class="page-title"><?php the_title(); ?></h1>
+		<h1 class="page-title">single<?php the_title(); ?></h1>
 	</div>
 </header>
 
@@ -28,6 +28,8 @@ if (function_exists('get_field')) {
 
 		<div class="alt-bg project-gallery">
 	    	<div class="container">
+
+	    		<h2>Screenshots</h2>
 
 		    	<?php foreach ( $above_page as $image ) { ?>
 		    		<div class="col-xs-6 col-sm-3 project-thumb">

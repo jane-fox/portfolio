@@ -6,6 +6,7 @@
 
 
 #animation-container {
+	
 	position: relative;
 
 	// Pulls it up under header
@@ -27,35 +28,30 @@
 		margin: 0;
 	}
 
-	//Make the call to action have a little spacing above.
 	.button {
-		margin-top: $tightness*2;
-	}
-
-
-	.layer  {
-		width: 100%;
-
-		canvas {
-			position: absolute;
-			left: -200px;
-			top: -100px;
-			z-index: 10;
-		}
-		.content {
-			z-index: 100;
-			position: absolute;
-			width: 100%;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			padding-bottom: $tightness * 3;
-		}
-	}
-	.button {
+		margin-top: $tightness * 2;
 		background-color: transparent;
 	}
-}
+
+
+	canvas {
+		position: absolute;
+		left: -200px;
+		top: -100px;
+		z-index: 10;
+	}
+
+	.content {
+		z-index: 100;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding-bottom: $tightness * 3;
+	}
+
+} // #animation-container
 
 
 
