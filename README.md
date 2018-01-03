@@ -1,7 +1,7 @@
 
 # About
 
-Simple theme for my portfolio; based on _s theme.
+A custom theme for my web portfolio. I designered it all on my own, does that make me 
 
 
 ## Using
@@ -10,7 +10,7 @@ To get started, cd into directory and use `npm install` to set up tools.
 
 During development use `gulp watch` to watch JS and CSS files and automatically compile them.
 
-If adding new scripts or styles, update the gulp file instead of the standard wordpress enque, so they all stay minified together for the fastest load. 
+If adding new scripts or styles, update the gulp file instead of the standard wordpress enque. I know this isn't the standardad WordPress-friendly way, but I wanted to keep the assets all minified together for the fastest load. 
 
 
 ### Notes
@@ -28,3 +28,6 @@ https://github.com/Automattic/_s
 https://www.advancedcustomfields.com/
 
 https://github.com/lokesh/lightbox2/
+
+https://getbootstrap.com/
+
