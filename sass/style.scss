@@ -35,7 +35,6 @@
 
 .alt-bg {
 	background-color: $color-alt;
-	padding-bottom: $tightness;
 }
 
 .margin-top {
@@ -51,7 +50,8 @@
 .page-title {
 	font-size: $font-size-title;
 	margin: 0;
-	padding: $tightness*2 0;
+	padding: 0;
+	padding-top: $tightness*2;
 }
 
 
@@ -61,6 +61,7 @@
 	margin-bottom: $tightness*2;
 	h2,h3, h4 {
 		margin-top: $tightness/2;
+		line-height: 1.3;
 	}
 	.fa {
 		font-size: 72px;
@@ -71,6 +72,14 @@
 	.display-column {
 		margin-bottom: 0;
 		}
+}
+
+#content .container {
+	padding-bottom: $tightness*2;
+}
+
+#content .container p:last-child {
+	margin-bottom: 0;
 }
 
 
@@ -191,13 +200,27 @@
 	margin: 0;
 }
 
+
+
 .skill-list {
+
+	h4 {
+		margin-bottom: $tightness/2;
+		margin-top: $tightness;
+	}
+
+	em {
+		font-size: .9em;
+	}
+	p {
+		margin-bottom: $tightness/2;
+	}
 
 	ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
-		margin-bottom: $tightness;
+		//margin-bottom: $tightness;
 	}
 	li {
 		display: inline-block;
@@ -212,3 +235,5 @@
 	}
 
 }
+
+

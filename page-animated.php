@@ -31,7 +31,7 @@ get_header();
 
 <?php if (function_exists('get_field')) { ?>
 	<div class="container">
-	<div class="row text-center">
+	<div class="row">
 
 		<?php echo get_field("below_display"); ?>
 
