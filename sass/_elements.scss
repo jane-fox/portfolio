@@ -40,6 +40,9 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
 	margin-top: $tightness * 2;
 }
+h2 a {
+	line-height: 1;
+}
 
 a, a:visited {
 	color: $color-main;

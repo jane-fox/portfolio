@@ -122,13 +122,12 @@
 .project-gallery {
 
 	h2, h3 {
-		margin: 0;
 		margin-bottom: $tightness
 	}
 
 	width: 100%;
 	//background-color: $color-second;
-	padding: $tightness*2 0;
+	padding: 0;
 
 
 	.thumb-container {
