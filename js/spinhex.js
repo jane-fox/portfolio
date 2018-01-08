@@ -47,7 +47,7 @@ function hex_placer( options ) {
 				var pos = self.get_pos( x, y );
 
 				var img = document.createElement("img");
-				img.src = "";
+				img.src = self.img_src;
 				img.style = "left: "+ pos.x + "px; top: " + pos.y + "px;";
 
 				// The image being used is 250 wide for 100px side. 
