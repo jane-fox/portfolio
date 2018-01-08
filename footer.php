@@ -13,7 +13,7 @@
 <footer id="site-footer" role="contentinfo">
 	<div class="container">
 
-		<div class="col-sm-6">
+		<div class="col-xs-6">
 
 			<a href="/resume" target="_blank">
 				<span class="fa fa-file-text"></span> Resume
@@ -26,7 +26,7 @@
 		</div>
 
 
-		<div class="col-sm-6 footer-right text-right">
+		<div class="col-xs-6 footer-right text-right">
 			© 2018 Jane Fox
 		</div>
 		
