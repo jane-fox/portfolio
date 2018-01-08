@@ -17,13 +17,12 @@ var js_dir = [
 	"js/navigation.js",
 	"js/skip-link-focus-fix.js",
 	"js/bootstrap.min.js",
-	"js/parallax.min.js",
 	"js/spinhex.js",
 	"js/lightbox.js"
 
 ];
 
-var js_output = "js/scripts.js";
+var js_output = "js/scripts.min.js";
 
 // this {} will select both types of files
 //var css_dir = "css/**/*.{scss,css}";
@@ -35,13 +34,8 @@ var sass_dir = [
 var css_dir = "css";
 
 
-var template_dir = "templates/**/*.html";
-
-
-
 
 gulp.task('default', ["sass", "scripts"]);
-//gulp.task('default', ["scripts", "sass"]);
 
 
 //Watch each folder and update only relevant code

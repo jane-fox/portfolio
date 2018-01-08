@@ -27,7 +27,7 @@
 
 
 		<div class="col-sm-6 footer-right text-right">
-			© 2017 Jane Fox
+			© 2018 Jane Fox
 		</div>
 		
 	</div><!-- .container -->

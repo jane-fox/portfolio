@@ -18,7 +18,8 @@ input[type="submit"] {
 	font-size: $font-size-text;
 
 	&:hover,
-	&:visited {
+	&:visited,
+	&:active {
 		border-color: #FFF;
 		color: $color-white;
 	}

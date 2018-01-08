@@ -13,7 +13,7 @@ get_header();
 
 <div class="color-bg" id="animation-container">
 
-	<canvas id="hex-canvas"></canvas>
+	<div id="hex-container"></div>
 
 	<div class="content">
 
