@@ -53,6 +53,7 @@ function hex_placer( options ) {
 				// The image being used is 250 wide for 100px side. 
 				// This proportion may need to change if you change the image
 				img.height = self.hex_size * 2.5;
+				img.width = self.hex_size * 2.5;
 
 				self.container.appendChild(img);
 
