@@ -10,7 +10,7 @@ To get started, cd into directory and use `npm install` to set up tools.
 
 During development use `gulp watch` to watch JS and CSS files and automatically compile them.
 
-If adding new scripts or styles, update the gulp file instead of the standard wordpress enque. I know this isn't the standardad WordPress-friendly way, but I wanted to keep the assets all minified together for the fastest load. 
+If adding new scripts or styles, update the gulp file instead of the standard wordpress enque. I know this isn't the standard WordPress-friendly way, but I wanted to keep the assets all minified together for the fastest load. 
 
 
 ### Notes
